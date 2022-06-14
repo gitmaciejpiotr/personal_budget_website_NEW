@@ -62,7 +62,7 @@ button {
     font-size: 1.25em;
     color: #ffa260;
     border: 2px solid;
-    padding: 1rem 0;
+    padding: 1em 2em;
     transition: color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
