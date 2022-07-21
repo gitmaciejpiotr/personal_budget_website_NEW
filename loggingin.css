@@ -1,5 +1,195 @@
 body {
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    background: no-repeat url(nasa.png);
+    background-size: cover;
+    background-position: 5%;
+    background-attachment: fixed;
+}
+
+.split {
+    height: 5.25vw;
+    width: 50vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 0.2vw;
+}
+
+.left {
+    left: 0;
+    background-color: gold;
+}
+
+.right {
+    right: 0;
     background-color: black;
+}
+
+h1 {
+    font-size: 1.5vw;
+    margin-top: 0.2vw;
+    /* position: fixed; */
+    /* z-index: 1; */
+    left: 7em;
+    text-align: right;
+    /* width: 50%; */
+    font-family: 'Bungee Shade', cursive;
+}
+
+.right h1 {
+    left: 50%;
+    /* right: 10%; */
+    text-align: left;
+    color: gold;
+}
+
+hr {
+    border: 0.1vw solid black;
+    margin: 0;
+}
+
+.right hr {
+    border: 0.1vw solid gold;
+}
+
+form {
+    margin-top: 15%;
+    width: 70%;
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+    justify-content:right;
+    border: 8px solid black;
+    border-radius: 30px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    /* background-color: black; */
+}
+
+#inputs {
+    width: 55%;
+    height: 50%;
+}
+
+input {
+    margin-top: 4%;
+    margin-left: 50%;
+    background-color: rgb(255,255,255,0.6);
+    width: 80%;
+    font-family: 'Bungee Inline', serif;
+    font-size: 1rem;
+    text-align: left;
+    border: none;
+    box-shadow: 0 0.2em 0.2em -0.1em rgb(0,0,0,0.1);
+}
+
+input:nth-of-type(1) {
+    margin-top: 4%;
+}
+
+/* input:nth-of-type(4) {
+    margin-bottom: 4%;
+} */
+
+#checkbox {
+    width: 20%;
+    height: 10%;
+}
+
+#rememberme {
+    margin-left: 40%;
+    width: 2%;
+}
+
+#showPassword {
+    margin-top: 1%;
+    margin-left: 50%;
+    width: 2%;
+}
+
+label {
+    font-family: 'Bungee Inline', serif;
+}
+
+button {
+    margin-top: 4%;
+    margin-left: 40%;
+    margin-bottom: 4%;
+    background: none;
+    color: black;
+    border: 2px solid;
+    border-radius: 90px;
+    padding: 1em 2em;
+    font-size: 1.05em;
+    text-align: left;
+    height: 70px;
+    width: 210px;
+    font-family: 'Bungee Inline', serif;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, /*box-shadow 0.2s,*/ transform 0.2s;
+}
+
+img {
+    position: fixed;
+}
+
+.right button {
+    color: gold;
+}
+
+.right a {
+    color: gold;
+}
+.right button:hover {
+    background-color: gold;
+}
+
+.right a:hover {
+    color: black;
+}
+
+button:hover {
+    border-color: gold;
+    background-color: black;
+    color: gold;
+    /* box-shadow: 0 0.5em 0.5em -0.4em white; */
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+a {
+    font-family: 'Bungee Inline', cursive;
+    color: black;
+    text-decoration: none;
+    width: 1em;
+    height: 2em;
+    padding: 1rem 2rem;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: gold;
+}
+
+
+
+
+
+
+
+
+
+/* body {
+    height: 100vx;
+    background: no-repeat url(pawel-czerwinski-u7M_pbPyynM-unsplash.jpg);
+    background-size: cover;
+    background-position: 25% 20%;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,16 +208,8 @@ h1:nth-of-type(1) {
     margin-top: 8%;
 }
 
-section {
-    margin-top: 5%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    /* justify-content: space-evenly; */
-}
-
 form {
-    margin-top: 4%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -36,8 +218,17 @@ form {
     align-content: center;
 }
 
+section {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 div {
-    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
@@ -47,27 +238,29 @@ label {
 }
 
 input {
-    margin-left: 25%;
-    width: 60%;
+    margin-left: 10%;
+    width: 12em;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     text-align: center;
     border: none;
+    background-color: rgb(255,255,255,0.6);
+    box-shadow: 0 0.2em 0.2em -0.1em rgb(0,0,0,0.1);
 }
 
 button {
-    margin-top: 8%;
+    margin-top: 6%;
     background: none;
     font-family: 'Bodoni Moda', serif;
     font-size: 1.25em;
-    color: #ffa260;
+    color: gold;
     border: 2px solid;
     padding: 1em 2em;
     transition: color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 a {
-    color: #ffa260;
+    color: gold;
     text-decoration: none;
     width: 1em;
     height: 2em;
@@ -82,8 +275,8 @@ a:hover {
 button:hover {
     border-color: gold;
     color: white;
-    box-shadow: 0 0.5em 0.5em -0.4em gold;
+    box-shadow: 0 0.5em 0.5em -0.4em rgb(0,0,0,0.6);
     transform: translateX(0.5em);
     cursor: pointer;
 
-}
+} */

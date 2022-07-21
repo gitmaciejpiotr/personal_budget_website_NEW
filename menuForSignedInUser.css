@@ -1,10 +1,431 @@
 body {
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    background: no-repeat url(galaxy.png);
+    background-size: cover;
+    /* background-position: 25% 20%; */
+    background-attachment: fixed;
+}
+
+.split {
+    height: 3.25vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 0.2vw;
+}
+
+.left {
+    width: 12vw;
+    left: 0;
+    margin-left: 38%;
+    background-color: gold;
+    border-radius: 25vw 0 0 25vw;
+}
+
+.right {
+    width: 15vw;
+    right: 0;
+    margin-right: 35%;
+    background-color: black;
+    border-radius: 0 25vw 25vw 0;
+}
+
+h1 {
+    font-size: 0.9vw;
+    margin-top: 0.2vw;
+    /* position: fixed; */
+    /* z-index: 1; */
+    left: 7em;
+    text-align: right;
+    /* width: 50%; */
+    font-family: 'Bungee Shade', cursive;
+}
+h2 {
+    font-size: 1.2vw;
+    /* margin-top: 0.2vw; */
+    /* position: fixed; */
+    /* z-index: 1; */
+    left: 7em;
+    text-align: right;
+    /* width: 50%; */
+    font-family: 'Bungee Shade', cursive;
+}
+h3 {
+    font-size: 1.8vw;
+    /* margin-top: 0.2vw; */
+    /* position: fixed; */
+    /* z-index: 1; */
+    left: 7em;
+    text-align: center;
+    /* width: 50%; */
+    font-family: 'Bungee Shade', cursive;
+}
+
+.right h1 {
+    left: 50%;
+    /* right: 10%; */
+    text-align: left;
+    color: gold;
+}
+
+hr {
+    border: 0.05vw solid black;
+    margin: 0;
+}
+
+.right hr {
+    border: 0.05vw solid gold;
+}
+
+#options {
+    margin-top: 7%;
+    width: 90%;
+    height: 70%;
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 6px solid black;
+    border-radius: 30px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.option {
+    margin: 0;
+    width: 20%;
+    height: 8%;
+    border-radius: 0;
+}
+
+.option:nth-of-type(3) {
+    border: black;
+    background-color: black;
+    color: gold;
+}
+
+.option:hover {
+    transform: none;
+}
+
+#inputs {
+    width: 70%;
+    height: 80%;
+}
+
+input {
+    margin-top: 4%;
+    margin-left: 30%;
+    background-color: rgb(255, 255, 255, 0.6);
+    width: 60%;
+    font-family: 'Bungee Inline', serif;
+    font-size: 1rem;
+    text-align: left;
+    border: none;
+    box-shadow: 0 0.2em 0.2em -0.1em rgb(0, 0, 0, 0.1);
+}
+
+input:nth-of-type(1) {
+    margin-top: 4%;
+}
+
+input:nth-of-type(4) {
+    margin-bottom: 4%;
+}
+
+#showPassword {
+    margin-left: 30%;
+    margin-top: 1%;
+    width: 2%;
+}
+
+label {
+    font-family: 'Bungee Inline', serif;
+}
+
+
+button {
+    margin-top: 8%;
+    margin-right: 15%;
+    background: none;
+    color: black;
+    border: 2px solid;
+    border-radius: 90px;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    text-align: center;
+    height: 70px;
+    width: 210px;
+    font-family: 'Bungee Inline', serif;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+        /*box-shadow 0.2s,*/
+        transform 0.2s;
+}
+
+img {
+    position: fixed;
+}
+
+.right button {
+    color: gold;
+}
+
+.right a {
+    color: gold;
+}
+
+.right button:hover {
+    background-color: gold;
+}
+
+.right a:hover {
+    color: black;
+}
+
+button:hover {
+    border-color: gold;
+    background-color: black;
+    color: gold;
+    /* box-shadow: 0 0.5em 0.5em -0.4em white; */
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+a {
+    font-family: 'Bungee Inline', cursive;
+    color: black;
+    text-decoration: none;
+    width: 1em;
+    height: 2em;
+    padding: 1rem 2rem;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: gold;
+}
+
+#pie-charts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+
+.pie-chart {
+    background:
+        radial-gradient(circle closest-side,
+            transparent 66%,
+            gold 0),
+        conic-gradient(#4e79a7 0,
+            #4e79a7 38%,
+            #f28e2c 0,
+            #f28e2c 61%,
+            #e15759 0,
+            #e15759 77%,
+            #76b7b2 0,
+            #76b7b2 87%,
+            #59a14f 0,
+            #59a14f 93%,
+            #f5e5ae 0,
+            #f5e5ae 100%);
+    position: relative;
+    width: 500px;
+    min-height: 350px;
+    margin: 0;
+    /* outline: 1px solid #ccc; */
+}
+
+/* 
+.pie-chart:nth-of-type(2) {
+    border-left: 2px solid black;
+} */
+
+.pie-chart h2 {
+    position: absolute;
+    margin: 1rem;
+}
+
+.pie-chart cite {
+    position: absolute;
+    bottom: 0;
+    font-size: 80%;
+    padding: 1rem;
+    color: gray;
+}
+
+.pie-chart figcaption {
+    position: absolute;
+    bottom: 1em;
+    right: 0.05em;
+    font-size: smaller;
+    font-family: 'Bungee Inline', cursive;
+    text-align: right;
+}
+
+.pie-chart span:after {
+    display: inline-block;
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.4em;
+    height: 0.8em;
+    border-radius: 0.2em;
+    background: currentColor;
+}
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 40%;
+    height: 100%;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.fixed_header{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.fixed_header tbody{
+  display:block;
+  width: 100%;
+  overflow: auto;
+  height: 250px;
+}
+
+.fixed_header thead tr {
+   display: block;
+}
+
+.fixed_header thead {
+  background: black;
+  color:#fff;
+}
+
+.fixed_header th, .fixed_header td {
+  padding: 5px;
+  text-align: left;
+  width: 200px;
+}
+
+#plus {
+    margin-top: 10%;
+}
+
+
+
+
+
+/* body {
     height: 100vx;
-    background-image: url(paul-green-ZaJprCvDjVA-unsplash.jpg);
+    background-image: url(pawel-czerwinski-UBVwe1goozI-unsplash.jpg);
     background-size: cover;
 }
 
-section {
+h1 {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 0.5;
+    color: gold;
+    text-align: center;
+    width: 100%;
+    margin-top: 2em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+li {
+    background-color: rgb(250, 226, 90, 0.6);
+    /* background-color: rgb(0,0,0,0.1); 
+    font-family: 'Bodoni Moda', serif;
+    /* border: 2px solid; 
+    border: none;
+    border-radius: 180px;
+    /* padding: 1rem 0; 
+    font-size: 1.25em;
+    transition: color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 0.5em 0.5em -0.4em rgb(0, 0, 0);
+}
+
+a {
+    color: rgb(0, 0, 0, 0.8);
+    text-decoration: none;
+    width: 1em;
+    height: 2em;
+    padding: 1rem 2rem;
+    transition: color 0.2s;
+    display: none;
+}
+
+svg {
+    padding: 1em;
+}
+
+svg:hover +  a{
+    color: white;
+    display: inline;
+}
+
+/* section {
     margin: 0;
     margin-top: 0;
     height: 700px;
@@ -16,20 +437,10 @@ section {
     align-content: center;
 }
 
-h1 {
-    margin: 0;
-    background-color: rgb(255,215,0, 0.4);
-    font-family: 'Bodoni Moda', serif;
-    font-weight: 0.5;
-    color: black;
-    text-align: center;
-    width: 100%;
-}
-
-#buttons {
+.buttons {
     width: 100em;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -37,32 +448,27 @@ h1 {
 }
 
 button {
-    background-color: rgb(255,215,0, 0.8);
-    color: black;
+    margin-left: 10%;
+    background-color: rgb(250, 226, 90, 0.6);
+    background-color: rgb(0,0,0,0.1); 
     font-family: 'Bodoni Moda', serif;
-    border: 2px solid;
+    border: 2px solid; 
+    border: none;
     padding: 1rem 0;
     font-size: 1.25em;
     transition: color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 0.5em 0.5em -0.4em rgb(0, 0, 0);
 }
 
-a {
-    color: black;
-    text-decoration: none;
-    width: 1em;
-    height: 2em;
-    padding: 1rem 2rem;
-    transition: color 0.2s;
-}
+button:nth-of-type(2n) {
+    background-color: rgb(0, 0, 0, 0.1);
+} 
 
-a:hover {
-    color: white;
-}
-
-button:hover {
+ button:hover {
     border-color: black;
-    color: white;
-    box-shadow: 0 0.5em 0.5em -0.4em black;
-    transform: translateY(-0.5em);
+    background-color: gold;
+    color: gold;
+    box-shadow: 0 0.5em 0.5em -0.4em rgb(0, 0, 0, 0.4);
+    transform: translateY(-0.4em);
     cursor: pointer;
-}
+} */

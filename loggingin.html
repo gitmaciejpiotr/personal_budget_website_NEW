@@ -7,28 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logging In Menu</title>
     <link rel="stylesheet" href="loggingin.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Cormorant+Garamond:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1>B &nbsp U &nbsp D &nbsp Ż &nbsp E &nbsp T</h1>
-    <h1>O &nbsp S &nbsp O &nbsp B &nbsp I &nbsp S &nbsp T &nbsp Y</h1>
+    <div class="split left">
+        <h1>B &nbsp U &nbsp D &nbsp Ż &nbsp E &nbsp T &nbsp &nbsp</h1>
+        <hr noshade, color="black">
+    </div>
+
+    <div class="split right">
+        <h1>&nbsp &nbsp O &nbsp S &nbsp O &nbsp B &nbsp I &nbsp S &nbsp T &nbsp Y</h1>
+        <hr noshade, color="gold">
+    </div>
 
     <form action="menuForSignedInUser.html">
-        <section>
+        <section id="inputs">
+            <input id="email" type="email" name="email" placeholder="Email" required>
             <div>
-                <label for="email">Email: </label>
-                <input id="email" type="email" name="email" required>
-            </div>
-            <div>
-                <label for="password">Hasło: </label>
-                <input id="password" type="password" name="password" required>
+                <input id="myInput" type="password" name="password" placeholder="Hasło" required>
+                <input id="showPassword" type="checkbox" onclick="myFunction()">
+                <label for="showPassword">Pokaż hasło</label>
             </div>
         </section>
-        
-        <button>Wchodzę w to</button>
 
+        <div class="checkbox">
+            <input type="checkbox" id="rememberme" name="rememberme" checked>
+            <label for="rememberme">Zapamiętaj mnie</label>
+        </div>
+
+        <button>ZROBIONE!&nbsp<img src="finger-png-43096.png" alt="" width="50" height="35"></button>
     </form>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+
 </body>
 
 </html>

@@ -1,43 +1,240 @@
 body {
     background-color: gold;
+    display: flex;
+    justify-content: center;
+    background: no-repeat url(pxArt.png);
+    background-size: cover;
 }
+
+.split {
+    height: 5.25vw;
+    width: 50vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 0.2vw;
+}
+
+.left {
+    left: 0;
+    background-color: gold;
+}
+
+.right {
+    right: 0;
+    background-color: black;
+}
+
+h1 {
+    font-size: 1.5vw;
+    margin-top: 0.2vw;
+    /* position: fixed; */
+    /* z-index: 1; */
+    left: 7em;
+    text-align: right;
+    /* width: 50%; */
+    font-family: 'Bungee Shade', cursive;
+}
+
+.right h1 {
+    left: 50%;
+    /* right: 10%; */
+    text-align: left;
+    color: gold;
+}
+
+hr {
+    border: 0.1vw solid black;
+    margin: 0;
+}
+
+.right hr {
+    border: 0.1vw solid gold;
+}
+
+form {
+    margin-top: 15%;
+    width: 90%;
+    height: 70%;
+    background-color: gold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
 section {
-    width: 50%;
-    height: 50%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: black; */
+}
+
+#inputs {
+    width: 70%;
+    height: 80%;
+}
+
+input {
+    margin-top: 4%;
+    margin-left: 30%;
+    background-color: rgb(255,255,255,0.6);
+    width: 60%;
+    font-family: 'Bungee Inline', serif;
+    font-size: 1rem;
+    text-align: left;
+    border: none;
+    box-shadow: 0 0.2em 0.2em -0.1em rgb(0,0,0,0.1);
+}
+
+input:nth-of-type(1) {
+    margin-top: 4%;
+}
+
+input:nth-of-type(4) {
+    margin-bottom: 4%;
+}
+
+#showPassword {
+    margin-left: 30%;
+    margin-top: 1%;
+    width: 2%;
+}
+
+label {
+    font-family: 'Bungee Inline', serif;
+}
+
+
+button {
+    margin-top: 8%;
+    margin-right: 15%;
+    background: none;
+    color: black;
+    border: 2px solid;
+    border-radius: 90px;
+    padding: 1em 2em;
+    font-size: 1.05em;
+    text-align: left;
+    height: 70px;
+    width: 210px;
+    font-family: 'Bungee Inline', serif;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, /*box-shadow 0.2s,*/ transform 0.2s;
+}
+
+img {
+    position: fixed;
+}
+
+.right button {
+    color: gold;
+}
+
+.right a {
+    color: gold;
+}
+.right button:hover {
+    background-color: gold;
+}
+
+.right a:hover {
+    color: black;
+}
+
+button:hover {
+    border-color: gold;
+    background-color: black;
+    color: gold;
+    /* box-shadow: 0 0.5em 0.5em -0.4em white; */
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+a {
+    font-family: 'Bungee Inline', cursive;
+    color: black;
+    text-decoration: none;
+    width: 1em;
+    height: 2em;
+    padding: 1rem 2rem;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: gold;
+}
+
+
+
+
+/* body {
+    height: 100vx;
+    background: no-repeat url(pawel-czerwinski-FyMmcS7LWvY-unsplash.jpg);
+    background-size: cover;
+    background-position: 25% 20%;
+    background-attachment: fixed;
 }
 
 form {
     margin-top: 15%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content:flex-start;
     align-items: center;
     flex-wrap: wrap;
     align-content: center;
 }
 
-div {
-    margin-top: 3%;
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#labels {
+    margin-left: 8%;
+    width: 15%;
+    height: 50%;
+}
+
+#inputs {
+    width: 45%;
+    height: 50%;
 }
 
 label {
+    margin-top: 10%;
     font-size: xx-large;
-    color: black;
+    text-align: end;
+    color: rgb(255, 227, 70);
     font-family: 'Bodoni Moda', serif;
 }
 
+label:nth-of-type(1) {
+    margin-top: 0%;
+}
+
 input {
-    margin-left: 25%;
-    width: 60%;
+    margin-top: 8%;
+    margin-left: 10%;
+    background-color: rgb(255,255,255,0.6);
+    width: 80%;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     text-align: center;
     border: none;
+    box-shadow: 0 0.2em 0.2em -0.1em rgb(0,0,0,0.1);
+}
+
+input:nth-of-type(1) {
+    margin-top: 0%;
 }
 
 button {
+    margin-left: 7%;
     background: none;
-    color: black;
+    color: rgb(255, 227, 70);
     font-family: 'Bodoni Moda', serif;
     border: 2px solid;
     padding: 1em 2em;
@@ -46,7 +243,7 @@ button {
 }
 
 a {
-    color: black;
+    color: rgb(255, 227, 70);
     text-decoration: none;
     width: 1em;
     height: 2em;
@@ -59,9 +256,9 @@ a:hover {
 }
 
 button:hover {
-    border-color: black;
+    border-color: rgb(255, 227, 70);
     color: white;
     box-shadow: 0 0.5em 0.5em -0.4em black;
     transform: translateY(-0.5em) translateX(0.5em);
     cursor: pointer;
-}
+} */

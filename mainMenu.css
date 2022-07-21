@@ -1,12 +1,111 @@
-body {
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    background-color: gold;
+}
+
+.right {
+    right: 0;
     background-color: black;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+h1 {
+    margin-top: 15%;
+    text-align: right;
+    font-family: 'Bungee Shade', cursive;
+}
+
+.right h1 {
+    text-align: left;
+    color: gold;
+}
+
+button {
+    background: none;
+    color: black;
+    border: 2px solid;
+    border-radius: 90px;
+    padding: 1em 2em;
+    font-size: 1em;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, /*box-shadow 0.2s,*/ transform 0.2s;
+}
+
+.right button {
+    color: gold;
+}
+
+.right a {
+    color: gold;
+}
+.right button:hover {
+    background-color: gold;
+}
+
+.right a:hover {
+    color: black;
+}
+
+button:hover {
+    border-color: gold;
+    background-color: black;
+    color: gold;
+    /* box-shadow: 0 0.5em 0.5em -0.4em white; */
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+a {
+    font-family: 'Bungee Inline', cursive;
+    color: black;
+    text-decoration: none;
+    width: 1em;
+    height: 2em;
+    padding: 1rem 2rem;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: gold;
+}
+
+
+
+/* body {
+    background-color: black; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+    height: 100vx;
+    background: no-repeat url(pawel-czerwinski-FyMmcS7LWvY-unsplash.jpg);
+    background-size: cover;
+    background-position: 25% 20%;
+    background-attachment: fixed;
+} 
 
-h1 {
+/* h1 {
     font-family: 'Bodoni Moda', serif;
     font-weight: 0.5;
     color: gold;
@@ -56,4 +155,4 @@ button:hover {
     transform: translateY(-0.25em);
     cursor: pointer;
 
-}
+} */
