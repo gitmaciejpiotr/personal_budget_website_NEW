@@ -2,14 +2,14 @@ body {
     background-color: gold;
     display: flex;
     justify-content: center;
-    background: no-repeat url(galaxy.png);
+    background: no-repeat url(pictures/galaxy.png);
     background-size: cover;
     /* background-position: 25% 20%; */
     background-attachment: fixed;
 }
 
 .split {
-    height: 3.25vw;
+    height: 8vw;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -18,31 +18,35 @@ body {
 }
 
 .left {
-    width: 12vw;
+    /* width: 12vw; */
     left: 0;
-    margin-left: 38%;
-    background-color: gold;
-    border-radius: 25vw 0 0 25vw;
+    /* background-color: gold;
+    border-radius: 25vw 0 0 25vw; */
 }
 
-.right {
+/* .right {
     width: 15vw;
     right: 0;
     margin-right: 35%;
     background-color: black;
     border-radius: 0 25vw 25vw 0;
-}
+} */
 
 h1 {
     font-size: 0.9vw;
-    margin-top: 0.2vw;
+    color: gold;
+    background-color: black;
+    margin-left: 6vw;
     /* position: fixed; */
     /* z-index: 1; */
     left: 7em;
-    text-align: right;
+    text-align: center;
+    border: 0.6vw white;
+    border-style: dotted;
     /* width: 50%; */
     font-family: 'Bungee Shade', cursive;
 }
+
 h2 {
     font-size: 1.2vw;
     /* margin-top: 0.2vw; */
@@ -53,6 +57,7 @@ h2 {
     /* width: 50%; */
     font-family: 'Bungee Shade', cursive;
 }
+
 h3 {
     font-size: 1.8vw;
     /* margin-top: 0.2vw; */
@@ -63,6 +68,21 @@ h3 {
     /* width: 50%; */
     font-family: 'Bungee Shade', cursive;
 }
+
+h4 {
+    font-size: 1.8vw;
+    color: goldenrod;
+    background-color: black;
+    /* margin-top: 0.2vw; */
+    /* position: fixed; */
+    /* z-index: 1; */
+    left: 7em;
+    text-align: center;
+    /* width: 50%; */
+    font-family: 'Bungee Shade', cursive;
+}
+
+
 
 .right h1 {
     left: 50%;
@@ -84,7 +104,7 @@ hr {
     margin-top: 7%;
     width: 90%;
     height: 70%;
-    background-color: gold;
+    background-color: rgb(255, 215, 0, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -169,7 +189,15 @@ button {
         transform 0.2s;
 }
 
-img {
+button:nth-of-type(1) {
+    border-radius: 1.5vw 0 0 0;
+}
+
+button:nth-of-type(5) {
+    border-radius: 0 1.5vw 0 0;
+}
+
+img:nth-of-type(1) {
     position: fixed;
 }
 
@@ -217,7 +245,20 @@ a:hover {
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 1%;
-    margin-top: 1%;
+    margin-top: 0;
+}
+
+.card {
+    background-color: transparent;
+    width: 40%;
+    height: 100%;
+    margin-bottom: 21vw;
+}
+
+#menuToggle,
+#menuToggle2 {
+    visibility: hidden;
+    opacity: 0;
 }
 
 
@@ -239,15 +280,38 @@ a:hover {
             #f5e5ae 0,
             #f5e5ae 100%);
     position: relative;
-    width: 500px;
+    width: 35vw;
     min-height: 350px;
     margin: 0;
+    border-radius: 2.5vw;
+    border: 3px solid black;
     /* outline: 1px solid #ccc; */
 }
 
-/* 
-.pie-chart:nth-of-type(2) {
-    border-left: 2px solid black;
+ul {
+    /* margin: 4px, 4px;
+    padding: 4px;
+    background-color: green; */
+    padding: 0;
+    width: 500px;
+    height: 110px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+    list-style: none;
+}
+
+li {
+    color: white;
+}
+
+b {
+    color: black;
+}
+
+
+/* .pie-chart:nth-of-type(2) {
+    margin-right: 70%;
 } */
 
 .pie-chart h2 {
@@ -263,10 +327,10 @@ a:hover {
     color: gray;
 }
 
-.pie-chart figcaption {
+/* .pie-chart*/
+figcaption {
     position: absolute;
     bottom: 1em;
-    right: 0.05em;
     font-size: smaller;
     font-family: 'Bungee Inline', cursive;
     text-align: right;
@@ -289,8 +353,8 @@ a:hover {
     background-color: transparent;
     width: 40%;
     height: 100%;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px;
+    /* border: 1px solid #f1f1f1; */
+    /* perspective: 1000px; */
     /* Remove this if you don't want the 3D effect */
 }
 
@@ -305,7 +369,7 @@ a:hover {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+:checked+.flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -322,7 +386,7 @@ a:hover {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-    background-color: #bbb;
+    /* background-color: #bbb; */
     color: black;
 }
 
@@ -333,36 +397,101 @@ a:hover {
     transform: rotateY(180deg);
 }
 
-.fixed_header{
+.fixed_header {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
 }
 
-.fixed_header tbody{
-  display:block;
-  width: 100%;
-  overflow: auto;
-  height: 250px;
+.fixed_header tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 20vw;
 }
 
 .fixed_header thead tr {
-   display: block;
+    display: block;
 }
 
 .fixed_header thead {
-  background: black;
-  color:#fff;
+    background: black;
+    color: #fff;
 }
 
-.fixed_header th, .fixed_header td {
-  padding: 5px;
-  text-align: left;
-  width: 200px;
+.fixed_header th,
+.fixed_header td {
+    padding: 5px;
+    text-align: left;
+    width: 200px;
+}
+
+label {
+    margin-top: 2.5%;
+    padding: 15px 25px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: whitesmoke;
+    background-color: red;
+    border: none;
+    border-radius: 90px;
+    box-shadow: 0 0.5em rgba(0, 0, 0, 0.493);
+    transition: color 0.1s, border-color 0.1s, box-shadow 0.1s, transform 0.1s;
+}
+
+label:hover {
+    background-color: rgb(241, 16, 0);
+}
+
+label:active {
+    background-color: rgb(199, 0, 0);
+    box-shadow: 0 5px black;
+    box-shadow: 0 0.25em black;
+    transform: translateY(4px);
 }
 
 #plus {
-    margin-top: 10%;
+    margin-top: 13%;
+}
+
+#bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h4 {
+    font-size: 1.4vw;
+    /* margin-top: 0.2vw; */
+    /* position: fixed; */
+    /* z-index: 1; */
+    left: 7em;
+    text-align: center;
+    /* width: 50%; */
+    font-family: 'Bungee Inline', cursive;
+}
+
+img {
+    position: fixed;
+    height: 7vw;
+    width: 7vw;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#sum {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 
