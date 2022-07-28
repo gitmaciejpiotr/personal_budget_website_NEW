@@ -4,7 +4,6 @@ body {
     justify-content: center;
     background: no-repeat url(pictures/galaxy.png);
     background-size: cover;
-    /* background-position: 25% 20%; */
     background-attachment: fixed;
 }
 
@@ -18,86 +17,58 @@ body {
 }
 
 .left {
-    /* width: 12vw; */
     left: 0;
-    /* background-color: gold;
-    border-radius: 25vw 0 0 25vw; */
 }
-
-/* .right {
-    width: 15vw;
-    right: 0;
-    margin-right: 35%;
-    background-color: black;
-    border-radius: 0 25vw 25vw 0;
-} */
 
 h1 {
     font-size: 0.9vw;
     color: gold;
     background-color: black;
     margin-left: 6vw;
-    /* position: fixed; */
-    /* z-index: 1; */
     left: 7em;
     text-align: center;
     border: 0.6vw white;
     border-style: dotted;
-    /* width: 50%; */
     font-family: 'Bungee Shade', cursive;
+}
+
+#secondVerse {
+    font-family: 'Bungee Inline', serif;
 }
 
 h2 {
     font-size: 1.2vw;
-    /* margin-top: 0.2vw; */
-    /* position: fixed; */
-    /* z-index: 1; */
-    left: 7em;
-    text-align: right;
-    /* width: 50%; */
+    margin: 0;
+    left: 2em;
     font-family: 'Bungee Shade', cursive;
+}
+
+#balanceType {
+    text-align: center;
+    font-family: 'Bungee Inline', serif;
+    font-size: 1.4vw;
+    height: 2.3vw;
 }
 
 h3 {
     font-size: 1.8vw;
-    /* margin-top: 0.2vw; */
-    /* position: fixed; */
-    /* z-index: 1; */
     left: 7em;
     text-align: center;
-    /* width: 50%; */
     font-family: 'Bungee Shade', cursive;
 }
 
 h4 {
-    font-size: 1.8vw;
-    color: goldenrod;
-    background-color: black;
-    /* margin-top: 0.2vw; */
-    /* position: fixed; */
-    /* z-index: 1; */
-    left: 7em;
-    text-align: center;
-    /* width: 50%; */
-    font-family: 'Bungee Shade', cursive;
-}
-
-
-
-.right h1 {
-    left: 50%;
-    /* right: 10%; */
-    text-align: left;
-    color: gold;
-}
-
-hr {
-    border: 0.05vw solid black;
+    font-size: 3vw;
+    width: 35%;
+    color: black;
     margin: 0;
+    text-align: center;
+    font-family: 'Bungee Shade', cursive;
+    transition: color 0.5s;
 }
 
-.right hr {
-    border: 0.05vw solid gold;
+h4:hover {
+    color: white;
 }
 
 #options {
@@ -123,6 +94,121 @@ hr {
     width: 20%;
     height: 8%;
     border-radius: 0;
+    background: none;
+    color: black;
+    border: 2px solid;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    text-align: center;
+    font-family: 'Bungee Inline', serif;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+        transform 0.2s;
+}
+
+.option:hover {
+    border-color: gold;
+    background-color: black;
+    color: gold;
+    cursor: pointer;
+}
+
+
+.navbar {
+    overflow: hidden;
+    font-family: 'Bungee Inline', serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 1.5vw 1.5vw 0 0;
+}
+
+.navbar a {
+    float: left;
+    font-size: 0.9em;
+    color: black;
+    text-align: center;
+    border: 2px solid gold;
+    border-bottom-color: black;
+    padding: 0.5em 1em;
+    width: 20%;
+    height: 8%;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.navbar a:nth-of-type(1) {
+    border-radius: 1.5vw 0 0 0;
+}
+
+.navbar a:nth-of-type(4) {
+    border-radius: 0 1.5vw 0 0;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    width: 23%;
+    height: 8%;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 0.9em;
+    width: 100%;
+    border: 2px solid gold;
+    border-bottom-color: black;
+    outline: none;
+    color: black;
+    padding: 0.5em 1em;
+
+    background-color: rgb(255, 215, 0, 0.7);
+    font-family: inherit;
+    margin: 0;
+    transition: inherit;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+.dropbtn:focus {
+    background-color: gold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    width: 18vw;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    border: none;
+    width: 89%;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin: 0;
+}
+
+.dropdown-content a:hover {
+    color: gold;
+    background-color: black;
+    /* border: 2px solid white; */
+    border-radius: 0 0 5px 5px;
+}
+
+.show {
+    display: block;
+}
+
+.option:nth-of-type(1) {
+    border-radius: 1.5vw 0 0 0;
 }
 
 .option:nth-of-type(3) {
@@ -131,113 +217,8 @@ hr {
     color: gold;
 }
 
-.option:hover {
-    transform: none;
-}
-
-#inputs {
-    width: 70%;
-    height: 80%;
-}
-
-input {
-    margin-top: 4%;
-    margin-left: 30%;
-    background-color: rgb(255, 255, 255, 0.6);
-    width: 60%;
-    font-family: 'Bungee Inline', serif;
-    font-size: 1rem;
-    text-align: left;
-    border: none;
-    box-shadow: 0 0.2em 0.2em -0.1em rgb(0, 0, 0, 0.1);
-}
-
-input:nth-of-type(1) {
-    margin-top: 4%;
-}
-
-input:nth-of-type(4) {
-    margin-bottom: 4%;
-}
-
-#showPassword {
-    margin-left: 30%;
-    margin-top: 1%;
-    width: 2%;
-}
-
-label {
-    font-family: 'Bungee Inline', serif;
-}
-
-
-button {
-    margin-top: 8%;
-    margin-right: 15%;
-    background: none;
-    color: black;
-    border: 2px solid;
-    border-radius: 90px;
-    padding: 0.5em 1em;
-    font-size: 0.9em;
-    text-align: center;
-    height: 70px;
-    width: 210px;
-    font-family: 'Bungee Inline', serif;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
-        /*box-shadow 0.2s,*/
-        transform 0.2s;
-}
-
-button:nth-of-type(1) {
-    border-radius: 1.5vw 0 0 0;
-}
-
-button:nth-of-type(5) {
+.option:nth-of-type(5) {
     border-radius: 0 1.5vw 0 0;
-}
-
-img:nth-of-type(1) {
-    position: fixed;
-}
-
-.right button {
-    color: gold;
-}
-
-.right a {
-    color: gold;
-}
-
-.right button:hover {
-    background-color: gold;
-}
-
-.right a:hover {
-    color: black;
-}
-
-button:hover {
-    border-color: gold;
-    background-color: black;
-    color: gold;
-    /* box-shadow: 0 0.5em 0.5em -0.4em white; */
-    transform: translateY(-0.25em);
-    cursor: pointer;
-}
-
-a {
-    font-family: 'Bungee Inline', cursive;
-    color: black;
-    text-decoration: none;
-    width: 1em;
-    height: 2em;
-    padding: 1rem 2rem;
-    transition: color 0.2s;
-}
-
-a:hover {
-    color: gold;
 }
 
 #pie-charts {
@@ -251,8 +232,7 @@ a:hover {
 .card {
     background-color: transparent;
     width: 40%;
-    height: 100%;
-    margin-bottom: 21vw;
+    margin-bottom: 19vw;
 }
 
 #menuToggle,
@@ -281,23 +261,19 @@ a:hover {
             #f5e5ae 100%);
     position: relative;
     width: 35vw;
-    min-height: 350px;
+    min-height: 18.5vw;
     margin: 0;
     border-radius: 2.5vw;
     border: 3px solid black;
-    /* outline: 1px solid #ccc; */
 }
 
 ul {
-    /* margin: 4px, 4px;
-    padding: 4px;
-    background-color: green; */
     padding: 0;
-    width: 500px;
-    height: 110px;
+    width: 100%;
+    height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
-    text-align: justify;
+    text-align: right;
     list-style: none;
 }
 
@@ -305,32 +281,37 @@ li {
     color: white;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: gold;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
 b {
     color: black;
 }
-
-
-/* .pie-chart:nth-of-type(2) {
-    margin-right: 70%;
-} */
 
 .pie-chart h2 {
     position: absolute;
     margin: 1rem;
 }
 
-.pie-chart cite {
-    position: absolute;
-    bottom: 0;
-    font-size: 80%;
-    padding: 1rem;
-    color: gray;
-}
-
 /* .pie-chart*/
 figcaption {
     position: absolute;
-    bottom: 1em;
+    bottom: 0.5em;
+    right: 0.25em;
     font-size: smaller;
     font-family: 'Bungee Inline', cursive;
     text-align: right;
@@ -340,29 +321,16 @@ figcaption {
     display: inline-block;
     content: "";
     width: 0.8em;
-    height: 0.8em;
     margin-left: 0.4em;
     height: 0.8em;
     border-radius: 0.2em;
     background: currentColor;
 }
 
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-    background-color: transparent;
-    width: 40%;
-    height: 100%;
-    /* border: 1px solid #f1f1f1; */
-    /* perspective: 1000px; */
-    /* Remove this if you don't want the 3D effect */
-}
-
 /* This container is needed to position the front and back side */
 .flip-card-inner {
     position: relative;
     width: 100%;
-    height: 100%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
@@ -378,21 +346,12 @@ figcaption {
 .flip-card-back {
     position: absolute;
     width: 100%;
-    height: 100%;
     -webkit-backface-visibility: hidden;
-    /* Safari */
     backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-    /* background-color: #bbb; */
-    color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-    background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
 }
@@ -407,7 +366,7 @@ figcaption {
     display: block;
     width: 100%;
     overflow: auto;
-    height: 20vw;
+    height: 17vw;
 }
 
 .fixed_header thead tr {
@@ -427,23 +386,27 @@ figcaption {
 }
 
 label {
-    margin-top: 2.5%;
+    font-family: 'Bungee Inline', serif;
+    margin-top: 0.5%;
     padding: 15px 25px;
     height: 40px;
     font-size: 20px;
     text-align: center;
     cursor: pointer;
     outline: none;
-    color: whitesmoke;
-    background-color: red;
-    border: none;
+    color: gold;
+    background-color: rgb(255, 60, 0);
+    background-color: #333;
+    border: 2.5px solid goldenrod;
     border-radius: 90px;
     box-shadow: 0 0.5em rgba(0, 0, 0, 0.493);
-    transition: color 0.1s, border-color 0.1s, box-shadow 0.1s, transform 0.1s;
+    transition: color 0.2s, border-color 0.2s, box-shadow 0.1s, transform 0.1s;
 }
 
 label:hover {
     background-color: rgb(241, 16, 0);
+    border-color: gold;
+    color: white;
 }
 
 label:active {
@@ -451,10 +414,20 @@ label:active {
     box-shadow: 0 5px black;
     box-shadow: 0 0.25em black;
     transform: translateY(4px);
+    border-color: rgb(156, 119, 23);
+}
+
+label:nth-of-type(1) {
+    margin-left: 15%;
+
+}
+
+label:nth-of-type(2) {
+    margin-right: 15%;
 }
 
 #plus {
-    margin-top: 13%;
+    margin-top: 10%;
 }
 
 #bottom {
@@ -464,35 +437,25 @@ label:active {
     justify-content: space-between;
 }
 
-h4 {
-    font-size: 1.4vw;
-    /* margin-top: 0.2vw; */
-    /* position: fixed; */
-    /* z-index: 1; */
-    left: 7em;
-    text-align: center;
-    /* width: 50%; */
-    font-family: 'Bungee Inline', cursive;
-}
-
-img {
-    position: fixed;
-    height: 7vw;
-    width: 7vw;
-}
-
 footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-#sum {
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.vintageMan {
+    position: fixed;
+    height: 7vw;
+    width: 7vw;
 }
+
+.finger {
+    /* position: relative; */
+    height: 3vw;
+    width: 4vw;
+    /* margin-top: 10%; */
+}
+
 
 
 
