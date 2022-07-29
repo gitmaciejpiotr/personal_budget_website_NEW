@@ -360,6 +360,7 @@ figcaption {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
+    font-family: 'Cormorant SC', serif;
 }
 
 .fixed_header tbody {
@@ -371,6 +372,9 @@ figcaption {
 
 .fixed_header thead tr {
     display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .fixed_header thead {
@@ -382,7 +386,64 @@ figcaption {
 .fixed_header td {
     padding: 5px;
     text-align: left;
-    width: 200px;
+    width: 20%;
+}
+
+#category1 {
+    background-color: #4e79a7;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+#category2 {
+    background-color: #f28e2c;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+#category3 {
+    background-color: #e15759;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+#category4 {
+    background-color: #76b7b2;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+#category5 {
+    background-color: #59a14f;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+#category6 {
+    background-color: #f5e5ae;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.categorySum_FirstPart {
+    background-color: rgba(128, 128, 128, 0.4);
+    border-radius: 10px 0 0 10px;
+}
+
+.categorySum_SecondPart {
+    background-color: rgba(128, 128, 128, 0.4);
+    border-radius: 0 10px 10px 0;
+}
+
+button {
+    background-color: transparent;
+    border-radius: 2px;
+    transition: background-color 0.05s;
+}
+
+button:hover {
+    background-color: gold;
 }
 
 label {
