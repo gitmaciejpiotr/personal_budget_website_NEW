@@ -261,11 +261,9 @@ input {
 #onlyButton {
     width: 20%;
     margin-left: 40%;
-}
-
-#onlyButton {
     background: none;
     font-family: 'Bungee Inline', cursive;
+    text-align: left;
     color: black;
     border: 2px solid;
     border-radius: 90px;
@@ -281,4 +279,8 @@ input {
     /* box-shadow: 0 0.5em 0.5em -0.4em white; */
     transform: translateX(0.25em);
     cursor: pointer;
+}
+
+#finger {
+    position: fixed;
 }
