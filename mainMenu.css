@@ -42,7 +42,7 @@ h1 {
     color: gold;
 }
 
-button {
+/* button {
     background: none;
     color: black;
     border: 2px solid;
@@ -50,16 +50,16 @@ button {
     padding: 1em 2em;
     font-size: 1em;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s, /*box-shadow 0.2s,*/ transform 0.2s;
-}
+} */
 
-.right button {
+.right a {
     color: gold;
 }
 
 .right a {
     color: gold;
 }
-.right button:hover {
+.right a:hover {
     background-color: gold;
 }
 
@@ -67,27 +67,34 @@ button {
     color: black;
 }
 
-button:hover {
+/* button:hover {
+    border-color: gold;
+    background-color: black;
+    color: gold;
+    /* box-shadow: 0 0.5em 0.5em -0.4em white; 
+    transform: translateY(-0.25em);
+    cursor: pointer;
+} */
+
+a {
+    font-family: 'Bungee Inline', cursive;
+    text-decoration: none;
+    background: none;
+    color: black;
+    border: 2px solid;
+    border-radius: 90px;
+    padding: 1em 2em;
+    font-size: 1em;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+a:hover {
     border-color: gold;
     background-color: black;
     color: gold;
     /* box-shadow: 0 0.5em 0.5em -0.4em white; */
     transform: translateY(-0.25em);
     cursor: pointer;
-}
-
-a {
-    font-family: 'Bungee Inline', cursive;
-    color: black;
-    text-decoration: none;
-    width: 1em;
-    height: 2em;
-    padding: 1rem 2rem;
-    transition: color 0.2s;
-}
-
-a:hover {
-    color: gold;
 }
 
 

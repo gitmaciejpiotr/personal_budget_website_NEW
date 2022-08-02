@@ -158,7 +158,7 @@ button:hover {
     background-color: black;
     color: gold;
     /* box-shadow: 0 0.5em 0.5em -0.4em white; */
-    transform: translateY(-0.25em);
+    transform: translateX(0.25em);
     cursor: pointer;
 }
 
