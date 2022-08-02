@@ -452,18 +452,17 @@ label {
     font-family: 'Bungee Inline', serif;
     margin-top: 0.5%;
     padding: 15px 25px;
-    height: 40px;
+    height: 45px;
     font-size: 20px;
     text-align: center;
     cursor: pointer;
     outline: none;
     color: gold;
-    background-color: rgb(255, 60, 0);
     background-color: #333;
     border: 2.5px solid goldenrod;
     border-radius: 90px;
     box-shadow: 0 0.5em rgba(0, 0, 0, 0.493);
-    transition: color 0.2s, border-color 0.2s, box-shadow 0.1s, transform 0.1s;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.1s, transform 0.1s;
 }
 
 label:hover {
@@ -513,7 +512,7 @@ footer {
 }
 
 .finger {
-    /* position: relative; */
+    /* position: fixed; */
     height: 3vw;
     width: 4vw;
     /* margin-top: 10%; */
