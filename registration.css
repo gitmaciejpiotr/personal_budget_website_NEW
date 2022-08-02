@@ -4,6 +4,7 @@ body {
     justify-content: center;
     background: no-repeat url(pictures/pxArt.png);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .split {
@@ -55,7 +56,7 @@ hr {
 
 form {
     margin-top: 15%;
-    width: 90%;
+    width: 70%;
     height: 70%;
     background-color: rgba(255, 217, 0, 0.9);
     display: flex;
@@ -147,7 +148,7 @@ button:hover {
     background-color: black;
     color: gold;
     /* box-shadow: 0 0.5em 0.5em -0.4em white; */
-    transform: translateY(-0.25em);
+    transform: translateX(0.25em);
     cursor: pointer;
 }
 
