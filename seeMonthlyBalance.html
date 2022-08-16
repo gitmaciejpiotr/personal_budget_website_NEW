@@ -13,13 +13,6 @@
 </head>
 
 <body>
-  <div class="split left">
-    <img src="pictures/vintage-man.png" class="vintageMan" alt="" width="100" height="100">
-    <h1>Gratulacje! <br>
-      <div class="secondVerse">Świetnie zarządzasz finansami!</div>
-    </h1>
-  </div>
-
   <section id="options">
     <div class="navbar">
       <a href="#home">+ Przychód</a>
@@ -53,29 +46,30 @@
       </svg></a>
     </div>
 
-    <h2 id="balanceType">Bieżący miesiąc</h2>
+    <h3>Bieżący miesiąc</h3>
 
     <section id="pie-charts">
-      <div class="card">
+      <div id="leftCard" class="card">
         <input id="menuToggle" type="checkbox">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <figure class="pie-chart">
-              <h2>Przychody = &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>4282 zł</b></h2>
-              <figcaption>
-                <ul>
-                  <li><b>38%</b> Wynagrodzenie <span style="color:#4e79a7"></span>&nbsp&nbsp<br></li>
-                  <li><b>23%</b> Odsetki bankowe <span style="color:#f28e2c"></span>&nbsp&nbsp<br></li>
-                  <li><b>16%</b> Sprzedaż na allegro <span style="color:#e15759"></span>&nbsp&nbsp<br></li>
-                  <li><b>10%</b> Korepetycje <span style="color:#76b7b2"></span>&nbsp&nbsp<br></li>
-                  <li><b>6%</b> Patronite <span style="color:#59a14f"></span>&nbsp&nbsp<br></li>
-                  <li><b>7%</b> Inne <span style="color:#f5e5ae"></span>&nbsp&nbsp</li>
-                </ul>
-              </figcaption>
+            <figcaption>
+              <ul>
+                <li><b style="color:#FFA82D">38%</b><br><span style="color:#FFA82D">Wynagrodzenie</span><br></li>
+                <li><b style="color:#AC8900">23%</b><br><span style="color:#AC8900">Odsetki bankowe</span><br></li>
+                <li><b style="color:#004e2e">16%</b><br><span style="color:#004e2e">Sprzedaż na allegro</span><br></li>
+                <li><b style="color:#D6A800">10%</b><br><span style="color:#D6A800">Korepetycje</span><br></li>
+                <li><b style="color:#008692">6%</b><br><span style="color:#008692">Patronite</span><br></li>
+                <li><b style="color:#D25400">7%</b><br><span style="color:#D25400">Inne</span></li>
+              </ul>
+            </figcaption>
+            <figure class="pie-chart" id="leftChart">
+              <h2>Przychody =</h2>
+              <h3> 4282 zł</h3>
             </figure>
           </div>
           <div class="flip-card-back">
-            <table class="fixed_header">
+            <table class="fixed_header" id="leftTable">
               <thead>
                 <tr>
                   <th>Kategoria</th>
@@ -87,7 +81,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td id="category1">Wynagrodzenie</td>
+                  <td class="category cat1">Wynagrodzenie</td>
                   <td>1100</td>
                   <td>2022-01-01</td>
                   <td style="text-align: center"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -148,7 +142,7 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td id="category2">Odsetki bankowe</td>
+                  <td class="category cat2">Odsetki bankowe</td>
                   <td>1000</td>
                   <td>2022-01-08</td>
                   <td style="text-align: center"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -197,7 +191,7 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td id="category3">Sprzedaż na allegro</td>
+                  <td class="category cat3">Sprzedaż na allegro</td>
                   <td>800</td>
                   <td>2022-01-31</td>
                   <td style="text-align: center"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -249,7 +243,7 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td id="category4">Korepetycje</td>
+                  <td class="category cat4">Korepetycje</td>
                   <td>400</td>
                   <td>2022-01-28</td>
                   <td style="text-align: center"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -283,7 +277,7 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td id="category5">Patronite</td>
+                  <td class="category cat5">Patronite</td>
                   <td>200</td>
                   <td>2022-01-31</td>
                   <td style="text-align: center"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -320,7 +314,7 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td id="category6">Inne</td>
+                  <td class="category cat6">Inne</td>
                   <td>60</td>
                   <td>2022-01-21</td>
                   <td style="text-align: center">-</td>
@@ -357,29 +351,30 @@
       </div>
 
 
-      <h3 id="plus">+</h3>
+      <h4 id="plus">+</h4>
 
       <div class="card">
         <input id="menuToggle2" type="checkbox">
         <!-- <div class="flip-card"> -->
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <figure class="pie-chart">
-              <h2>Przychody = &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>4170 zł</b></h2>
-              <figcaption>
-                <ul>
-                  <li><b>38%</b> Jedzenie <span style="color:#4e79a7"></span>&nbsp&nbsp<br></li>
-                  <li><b>23%</b> Mieszkanie <span style="color:#f28e2c"></span>&nbsp&nbsp<br></li>
-                  <li><b>16%</b> Transport <span style="color:#e15759"></span>&nbsp&nbsp<br></li>
-                  <li><b>10%</b> Telekomunikacja <span style="color:#76b7b2"></span>&nbsp&nbsp<br></li>
-                  <li><b>6%</b> Opieka zdrowotna <span style="color:#59a14f"></span>&nbsp&nbsp<br></li>
-                  <li><b>7%</b> Inne <span style="color:#f5e5ae"></span>&nbsp&nbsp</li>
-                </ul>
-              </figcaption>
+            <figcaption>
+              <ul>
+                <li><b style="color:#DC8000">38%</b><br><span style="color:#DC8000">Jedzenie</span><br></li>
+                <li><b style="color:#7F6500">23%</b><br><span style="color:#7F6500">Mieszkanie</span><br></li>
+                <li><b style="color:#B3A700">16%</b><br><span style="color:#B3A700">Transport</span><br></li>
+                <li><b style="color:#9C7A00">10%</b><br><span style="color:#9C7A00">Telekomunikacja</span><br></li>
+                <li><b style="color:#00636C">6%</b><br><span style="color:#00636C">Opieka zdrowotna</span><br></li>
+                <li><b style="color:#993D00">7%</b><br><span style="color:#993D00">Inne</span></li>
+              </ul>
+            </figcaption>
+            <figure class="pie-chart" id="rightChart">
+              <h2>Wydatki =</h2>
+              <h3> 4170 zł</h3>
             </figure>
           </div>
           <div class="flip-card-back">
-            <table class="fixed_header">
+            <table class="fixed_header" id="rightTable">
               <thead>
                 <tr>
                   <th>Kategoria</th>
@@ -391,7 +386,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td id="category1">Jedzenie</td>
+                  <td class="category cat1">Jedzenie</td>
                   <td>1100</td>
                   <td>2022-01-01</td>
                   <td style="text-align: center"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -452,7 +447,7 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td id="category2">Mieszkanie</td>
+                  <td class="category cat2">Mieszkanie</td>
                   <td>1000</td>
                   <td>2022-01-08</td>
                   <td style="text-align: center"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -501,7 +496,7 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td id="category3">Transport</td>
+                  <td class="category cat3">Transport</td>
                   <td>800</td>
                   <td>2022-01-31</td>
                   <td style="text-align: center"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -553,7 +548,7 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td id="category4">Telekomunikacja</td>
+                  <td class="category cat4">Telekomunikacja</td>
                   <td>400</td>
                   <td>2022-01-28</td>
                   <td style="text-align: center"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -587,7 +582,7 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td id="category5">Opieka zdrowotna</td>
+                  <td class="category cat5">Opieka zdrowotna</td>
                   <td>200</td>
                   <td>2022-01-31</td>
                   <td style="text-align: center"><button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -624,7 +619,7 @@
                   <td></td>
                 </tr>
                 <tr>
-                  <td id="category6">Inne</td>
+                  <td class="category cat6">Inne</td>
                   <td>60</td>
                   <td>2022-01-21</td>
                   <td style="text-align: center">-</td>
@@ -667,7 +662,15 @@
 
       <label for="menuToggle" class="toggleButton md-button md-button--raised">Odwróć</label>
 
-      <h4>= 112 zł</h4>
+      <h5>= 112 zł</h5>
+      <div id="messageForUser">
+        <div class="split left">
+          <h1>Gratulacje! <br>
+            <div class="secondVerse">Świetnie zarządzasz finansami!</div>
+          </h1>
+        </div>
+        <img src="pictures/vintage-man.png" class="vintageMan" alt="" width="100" height="100">
+      </div>
 
       <label for="menuToggle2" class="toggleButton md-button md-button--raised">Odwróć</label>
 
