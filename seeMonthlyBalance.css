@@ -7,69 +7,53 @@ body {
     background-attachment: fixed;
 }
 
-.split {
-    height: 8vw;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 0.2vw;
-}
-
-.left {
-    left: 0;
-}
-
-h1 {
-    font-size: 0.9vw;
-    color: gold;
-    background-color: black;
-    margin-left: 6vw;
-    left: 7em;
-    text-align: center;
-    border: 0.6vw white;
-    border-style: dotted;
-    font-family: 'Bungee Shade', cursive;
-}
-
 .secondVerse {
     font-family: 'Bungee Inline', serif;
 }
 
-h2 {
+.pie-chart h2 {
+    position: absolute;
+    top: 0;
     font-size: 1.2vw;
-    /* width: 100%; */
     margin: 0;
+    margin-left: 1em;
     font-family: 'Bungee Shade', cursive;
     text-align: left;
 }
 
-#balanceType {
+h3 {
     text-align: center;
     font-family: 'Bungee Inline', serif;
     font-size: 1.4vw;
     height: 2.3vw;
+    margin: 0;
 }
 
-h3 {
+h4 {
     font-size: 1.8vw;
     left: 7em;
     text-align: center;
     font-family: 'Bungee Shade', cursive;
 }
 
-h4 {
+h5 {
     font-size: 3vw;
-    width: 35%;
+    width: 18vw;
     color: black;
+    padding-left: 4%;
     margin: 0;
     text-align: center;
     font-family: 'Bungee Shade', cursive;
     transition: color 0.5s;
 }
 
-h4:hover {
+h5:hover {
     color: white;
+    cursor: default;
+}
+
+h5:hover+#messageForUser {
+    opacity: 1;
 }
 
 #options {
@@ -242,49 +226,63 @@ h4:hover {
     opacity: 0;
 }
 
-
 .pie-chart {
     background:
         radial-gradient(circle closest-side,
             transparent 66%,
             gold 0),
-        conic-gradient(#4e79a7 0,
-            #4e79a7 38%,
-            #f28e2c 0,
-            #f28e2c 61%,
-            #e15759 0,
-            #e15759 77%,
-            #76b7b2 0,
-            #76b7b2 87%,
-            #59a14f 0,
-            #59a14f 93%,
-            #f5e5ae 0,
-            #f5e5ae 100%);
-    position: relative;
-    width: 35vw;
+        conic-gradient(#FFA82D 0,
+            #FFA82D 38%,
+            #AC8900 0,
+            #AC8900 61%,
+            #004e2e 0,
+            #004e2e 77%,
+            #D6A800 0,
+            #D6A800 87%,
+            #008692 0,
+            #008692 93%,
+            #D25400 0,
+            #D25400 100%);
+
+    /* position: relative; */
+    width: 90%;
     min-height: 18.5vw;
     margin: 0;
-    border-radius: 2.5vw;
-    border: 3px solid black;
+    margin-left: 10%;
+    /* padding-bottom: 20%; */
+    border-radius: 45px;
+    /* border: 3px solid black; */
 }
 
-ul {
-    padding: 0;
-    width: 100%;
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    text-align: right;
-    list-style: none;
-}
+#rightChart {
+    background:
+        radial-gradient(circle closest-side,
+            transparent 66%,
+            gold 0),
+        conic-gradient(#DC8000 0,
+            #DC8000 38%,
+            #7F6500 0,
+            #7F6500 61%,
+            #B3A700 0,
+            #B3A700 77%,
+            #9C7A00 0,
+            #9C7A00 87%,
+            #00636C 0,
+            #00636C 93%,
+            #993D00 0,
+            #993D00 100%);
 
-li {
-    color: white;
+    width: 80%;
+    margin-left: 20%;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 3px;
+}
+
+::-webkit-scrollbar:hover {
+    width: 5px;
 }
 
 /* Track */
@@ -300,23 +298,65 @@ li {
 }
 
 b {
-    color: black;
-    font-family: 'Bungee Inline', serif;
+    padding: 4px;
+    font-size: large;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-family: 'Cormorant SC', serif;
+    border-radius: 20px;
 }
 
-.pie-chart h2 {
-    position: absolute;
-    margin: 1rem;
+#leftCard b {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* .pie-chart*/
 figcaption {
     position: absolute;
-    bottom: 0.5em;
-    right: 0.25em;
+    width: 30%;
+    margin-top: 3vw;
+    height: 13.5vw;
+    left: 0;
     font-size: smaller;
     font-family: 'Bungee Inline', cursive;
-    text-align: right;
+    text-align: center;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; */
+}
+
+ul {
+    /* position: absolute; */
+    /* top: 1; */
+    margin-top: 0;
+    background-color: gold;
+    padding: 0;
+    width: 100%;
+    height: 13.5vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    list-style: none;
+    border-radius: 46px 0 0 46px;
+}
+
+li {
+    /* width: 50%; */
+    color: white;
+    margin: 4% 0 4% 0;
+}
+
+span {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding-right: 6px;
+    /* border-radius: 90px; */
+}
+
+#leftCard span {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#leftCard span:nth-of-type(3) {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .pie-chart span:after {
@@ -343,11 +383,19 @@ figcaption {
     transform: rotateY(180deg);
 }
 
+.flip-card-front {
+    background-color: gold;
+    border-radius: 46px;
+    border: 3px solid black;
+}
+
 /* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
     position: absolute;
-    width: 100%;
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -391,41 +439,58 @@ figcaption {
     width: 20%;
 }
 
-#category1 {
-    background-color: #4e79a7;
+.category {
     color: black;
     border-radius: 10px;
     text-align: center;
 }
-#category2 {
-    background-color: #f28e2c;
-    color: black;
-    border-radius: 10px;
-    text-align: center;
+
+.cat1 {
+    background-color: #FFA82D;
 }
-#category3 {
-    background-color: #e15759;
-    color: black;
-    border-radius: 10px;
-    text-align: center;
+
+.cat2 {
+    background-color: #AC8900;
 }
-#category4 {
-    background-color: #76b7b2;
-    color: black;
-    border-radius: 10px;
-    text-align: center;
+
+.cat3 {
+    background-color: #F4E400;
 }
-#category5 {
-    background-color: #59a14f;
-    color: black;
-    border-radius: 10px;
-    text-align: center;
+
+.cat4 {
+    background-color: #D6A800;
 }
-#category6 {
-    background-color: #f5e5ae;
-    color: black;
-    border-radius: 10px;
-    text-align: center;
+
+.cat5 {
+    background-color: #008692;
+}
+
+.cat6 {
+    background-color: #D25400;
+}
+
+#rightTable .cat1 {
+    background-color: #DC8000;
+}
+
+#rightTable .cat2 {
+    background-color: #7F6500;
+}
+
+#rightTable .cat3 {
+    background-color: #B3A700;
+}
+
+#rightTable .cat4 {
+    background-color: #9C7A00;
+}
+
+#rightTable .cat5 {
+    background-color: #00636C;
+}
+
+#rightTable .cat6 {
+    background-color: #993D00;
 }
 
 .categorySum_FirstPart {
@@ -466,9 +531,9 @@ label {
 }
 
 label:hover {
-    background-color: rgb(241, 16, 0);
+    background-color: #DC042C;
     border-color: gold;
-    color: white;
+    color: gold;
 }
 
 label:active {
@@ -505,8 +570,41 @@ footer {
     justify-content: space-evenly;
 }
 
+#messageForUser {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.split {
+    height: 8vw;
+    position: fixed;
+    top: 0;
+    padding-top: 0.2vw;
+}
+
+.left {
+    left: 0;
+}
+
+h1 {
+    font-size: 0.9vw;
+    color: gold;
+    background-color: black;
+    margin-left: 6vw;
+    left: 7em;
+    text-align: center;
+    border: 0.6vw white;
+    border-style: dotted;
+    font-family: 'Bungee Shade', cursive;
+}
+
 .vintageMan {
     position: fixed;
+    top: 0;
+    left: 0;
     height: 7vw;
     width: 7vw;
 }
@@ -516,4 +614,19 @@ footer {
     height: 3vw;
     width: 4vw;
     /* margin-top: 10%; */
+}
+
+@media (max-width: 1400px) {
+
+    .pie-chart,
+    ul {
+        min-height: 300px;
+    }
+
+    ul {
+        position: absolute;
+        top: 10;
+
+    }
+
 }
