@@ -158,7 +158,7 @@ h5:hover+#messageForUser {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 22.15%;
+    top: 160px;
     left: 41.35%;
     background-color: black;
     width: 17.3%;
@@ -213,8 +213,7 @@ h5:hover+#messageForUser {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 1%;
-    margin-top: 0;
+    margin: 0;
 }
 
 .card {
@@ -692,6 +691,15 @@ footer {
     #options {
         margin-top: 20px;
         height: 1200px;
+        margin-bottom: 5%;
+    }
+
+    .dropdown-content {
+        top: 82px;
+    }
+
+    .dropdown-content a {
+        font-size: 1.20vw;
     }
 
     #pie-charts {
@@ -771,6 +779,10 @@ footer {
 
     #options {
         height: 1175px;
+    }
+
+    .dropdown-content {
+        display: none;
     }
 
     #hamburger-menu {
@@ -870,7 +882,7 @@ footer {
         margin-top: 4%;
     }
 
-    svg {
+    .fixed_header svg {
         width: 12px;
         height: 12px;
     }
@@ -915,7 +927,7 @@ footer {
         top: 69%;
     }
 
-    svg {
+    .fixed_header svg {
         width: 8px;
         height: 8px;
     }
