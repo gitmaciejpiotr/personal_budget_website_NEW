@@ -1,6 +1,6 @@
 body {
-    background-color: rgba(255, 217, 0, 0.7);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     background: no-repeat url(pictures/nasa.png);
     background-size: cover;
@@ -8,60 +8,42 @@ body {
     background-attachment: fixed;
 }
 
-.split {
-    height: 5.25vw;
-    width: 50vw;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 0.2vw;
+#headingSmall {
+    display: none;
 }
 
-.left {
-    left: 0;
-    background-color: gold;
+#heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.right {
-    right: 0;
-    background-color: black;
+a {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 8px solid black;
 }
 
 h1 {
-    font-size: 1.5vw;
-    margin-top: 0.2vw;
-    /* position: fixed; */
-    /* z-index: 1; */
-    left: 7em;
+    margin-bottom: 0;
     text-align: right;
-    /* width: 50%; */
     font-family: 'Bungee Shade', cursive;
-}
-
-.right h1 {
-    left: 50%;
-    /* right: 10%; */
-    text-align: left;
+    font-size: 25px;
+    color: black;
     color: gold;
 }
 
-hr {
-    border: 0.1vw solid black;
-    margin: 0;
-}
-
-.right hr {
-    border: 0.1vw solid gold;
-}
-
 form {
-    margin-top: 15%;
+    margin-top: 100px;
+    margin-left: 15%;
     width: 65%;
+    height: 400px;
     background-color: rgba(255, 217, 0, 0.9);
     display: flex;
     flex-direction: column;
-    justify-content:right;
+    justify-content: right;
     border: 8px solid black;
     border-radius: 30px;
 }
@@ -73,84 +55,83 @@ section {
 }
 
 #inputs {
+    margin-top: 20px;
     width: 70%;
     height: 50%;
 }
 
 input {
-    margin-top: 4%;
+    margin-top: 20px;
     margin-left: 35%;
-    background-color: rgb(255,255,255,0.6);
+    background-color: rgb(255, 255, 255, 0.6);
     width: 80%;
     font-family: 'Bungee Inline', serif;
     font-size: 1rem;
     text-align: left;
     border: none;
-    box-shadow: 0 0.2em 0.2em -0.1em rgb(0,0,0,0.1);
+    box-shadow: 0 0.2em 0.2em -0.1em rgb(0, 0, 0, 0.1);
 }
 
-input:nth-of-type(1) {
+/* input:nth-of-type(1) {
     margin-top: 4%;
-}
-
-/* input:nth-of-type(4) {
-    margin-bottom: 4%;
 } */
 
-#checkbox {
-    width: 20%;
-    height: 10%;
+#rememberme {
+    margin: 0;
+    width: 14px;
 }
 
-#rememberme {
-    margin-left: 40%;
-    width: 2%;
+label:nth-of-type(3) {
+    margin: 0;
+}
+
+.checkbox {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #showPassword {
     margin-top: 1%;
     margin-left: 35%;
-    width: 2%;
+    width: 14px;
 }
 
 label {
     font-family: 'Bungee Inline', serif;
 }
 
+#button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 button {
     margin-top: 4%;
-    margin-left: 40%;
     margin-bottom: 4%;
     background: none;
     color: black;
     border: 2px solid;
     border-radius: 90px;
-    padding: 1em 2em;
+    padding: 0.5em 1em;
     font-size: 1.05em;
     text-align: left;
-    height: 70px;
-    width: 210px;
+    /* height: 70px; */
+    width: 195px;
     font-family: 'Bungee Inline', serif;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s, /*box-shadow 0.2s,*/ transform 0.2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+        /*box-shadow 0.2s,*/
+        transform 0.2s;
 }
 
 img {
-    position: fixed;
-}
-
-.right button {
-    color: gold;
-}
-
-.right a {
-    color: gold;
-}
-.right button:hover {
-    background-color: gold;
-}
-
-.right a:hover {
-    color: black;
+    position: relative;
+    top: 20%;
+    right: 0;
 }
 
 button:hover {
@@ -162,7 +143,7 @@ button:hover {
     cursor: pointer;
 }
 
-a {
+button a {
     font-family: 'Bungee Inline', cursive;
     color: black;
     text-decoration: none;
@@ -172,111 +153,38 @@ a {
     transition: color 0.2s;
 }
 
-a:hover {
+button a:hover {
     color: gold;
 }
 
-
-
-
-
-
-
-
-
-/* body {
-    height: 100vx;
-    background: no-repeat url(pawel-czerwinski-u7M_pbPyynM-unsplash.jpg);
-    background-size: cover;
-    background-position: 25% 20%;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+@media (max-width: 1100px) {
+    h1 {
+        font-size: 2.3vw;
+    }
 }
 
-h1 {
-    font-family: 'Bodoni Moda', serif;
-    font-weight: 0.5;
-    color: gold;
-    text-align: center;
-    width: 100%;
+@media (max-width: 800px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    #heading {
+        display: none;
+    }
+
+    #headingSmall {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    form {
+        margin-top: 40px;
+    }
+
+    label {
+        font-size: 15px;
+    }
 }
-
-h1:nth-of-type(1) {
-    margin-top: 8%;
-}
-
-form {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-section {
-    margin-top: 5%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-div {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-size: xx-large;
-    color: gold;
-    font-family: 'Bodoni Moda', serif;
-}
-
-input {
-    margin-left: 10%;
-    width: 12em;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    text-align: center;
-    border: none;
-    background-color: rgb(255,255,255,0.6);
-    box-shadow: 0 0.2em 0.2em -0.1em rgb(0,0,0,0.1);
-}
-
-button {
-    margin-top: 6%;
-    background: none;
-    font-family: 'Bodoni Moda', serif;
-    font-size: 1.25em;
-    color: gold;
-    border: 2px solid;
-    padding: 1em 2em;
-    transition: color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-}
-
-a {
-    color: gold;
-    text-decoration: none;
-    width: 1em;
-    height: 2em;
-    padding: 1rem 2rem;
-    transition: color 0.2s;
-}
-
-a:hover {
-    color: white;
-}
-
-button:hover {
-    border-color: gold;
-    color: white;
-    box-shadow: 0 0.5em 0.5em -0.4em rgb(0,0,0,0.6);
-    transform: translateX(0.5em);
-    cursor: pointer;
-
-} */
