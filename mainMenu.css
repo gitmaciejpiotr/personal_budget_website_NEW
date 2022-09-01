@@ -46,18 +46,6 @@ h1 {
     color: gold;
 }
 
-/* button {
-    background: none;
-    color: black;
-    border: 2px solid;
-    border-radius: 90px;
-    padding: 1em 2em;
-    font-size: 1em;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s, /*box-sha
-transform 0.2s;
-}
-
-*/ 
 h2 {
     text-align: right;
     font-family: 'Bungee Inline', serif;
@@ -94,15 +82,6 @@ h4 {
     color: gold;
 }
 
-/* button:hover {
-    border-color: gold;
-    background-color: black;
-    color: gold;
-    /* box-shadow: 0 0.5em 0.5em -0.4em white; 
-    transform: translateY(-0.25em);
-    cursor: pointer;
-} */
-
 a {
     font-family: 'Bungee Inline', cursive;
     text-decoration: none;
@@ -123,7 +102,6 @@ a:hover {
     border-color: transparent;
     background-color: black;
     color: gold;
-    /* box-shadow: 0 0.5em 0.5em -0.4em white; */
     transform: translateY(-0.25em);
     cursor: pointer;
 }
