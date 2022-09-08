@@ -50,11 +50,10 @@ form {
 section {
     display: flex;
     flex-direction: column;
-    /* background-color: black; */
 }
 
 #inputs {
-    margin-top: 30px;
+    margin-top: 60px;
     width: 40%;
     height: 80%;
 }
@@ -62,7 +61,6 @@ section {
 input {
     margin-top: 18px;
     background-color: rgb(255,255,255,0.6);
-    /* width: 60%; */
     font-family: 'Bungee Inline', serif;
     font-size: 16px;
     text-align: left;
@@ -128,14 +126,12 @@ button:hover {
     border-color: gold;
     background-color: black;
     color: gold;
-    /* box-shadow: 0 0.5em 0.5em -0.4em white; */
     transform: translateX(0.25em);
     cursor: pointer;
 }
 
 @media (max-width: 1400px) {
     button {
-        /* font-size: 1.4vw; */
         text-align: center;
     }
 }
