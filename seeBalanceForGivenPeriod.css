@@ -16,11 +16,12 @@ body {
 }
 
 .pie-chart h2 {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 25%;
+  left: 25%; */
   font-size: 19px;
   margin: 0;
+  margin-right: 25%;
   font-family: 'Bungee Shade', cursive;
   text-align: left;
 }
@@ -35,13 +36,13 @@ h3 {
   font-size: 22px;
   height: 23px;
   margin: 0;
-  margin-bottom: 2%;
+  margin-bottom: 18px;
 }
 
 h4 {
-  position: absolute;
+  /* position: absolute;
   top: 25%;
-  left: 49.15%;
+  left: 49.15%; */
   font-size: 30px;
   text-align: center;
   font-family: 'Bungee Shade', cursive;
@@ -52,14 +53,11 @@ h4:hover {
 }
 
 h5 {
-  position: absolute;
-  top: 72%;
-  left: 34%;
   font-size: 55px;
   width: 330px;
   height: 50px;
   color: black;
-  padding-left: 4%;
+  /* padding-right: 4%; */
   margin: 0;
   text-align: center;
   font-family: 'Bungee Shade', cursive;
@@ -67,7 +65,7 @@ h5 {
 }
 
 h5:hover {
-  color: rgb(202, 47, 0);
+  color: rgb(206, 48, 0);
   cursor: default;
 }
 
@@ -158,7 +156,7 @@ h5:hover+#messageForUser {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 22.15%;
+  top: 160px;
   left: 41.35%;
   background-color: black;
   width: 17.3%;
@@ -212,9 +210,9 @@ h5:hover+#messageForUser {
 #pie-charts {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 1%;
-  margin-top: 0;
+  justify-content: space-evenly;
+  margin: 0;
+  height: 250px;
 }
 
 .card {
@@ -230,46 +228,49 @@ h5:hover+#messageForUser {
 
 .pie-chart {
   background:
-    radial-gradient(circle closest-side,
-      transparent 66%,
-      gold 0),
-    conic-gradient(#ff9100 0,
-      #ff9100 38%,
-      #AC8900 0,
-      #AC8900 61%,
-      #004e2e 0,
-      #004e2e 77%,
-      #989b00 0,
-      #989b00 87%,
-      #008692 0,
-      #008692 93%,
-      #D25400 0,
-      #D25400 100%);
+      radial-gradient(circle closest-side,
+          transparent 66%,
+          gold 0),
+      conic-gradient(#ff9100 0,
+          #ff9100 38%,
+          #AC8900 0,
+          #AC8900 61%,
+          #004e2e 0,
+          #004e2e 77%,
+          #989b00 0,
+          #989b00 87%,
+          #008692 0,
+          #008692 93%,
+          #D25400 0,
+          #D25400 100%);
 
   width: 90%;
   min-height: 270px;
   margin: 0;
   margin-left: 20%;
   border-radius: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #rightChart {
   background:
-    radial-gradient(circle closest-side,
-      transparent 66%,
-      gold 0),
-    conic-gradient(#DC8000 0,
-      #DC8000 38%,
-      #5f4c00 0,
-      #5f4c00 61%,
-      #B3A700 0,
-      #B3A700 77%,
-      #9C7A00 0,
-      #9C7A00 87%,
-      #00636C 0,
-      #00636C 93%,
-      #993D00 0,
-      #993D00 100%);
+      radial-gradient(circle closest-side,
+          transparent 66%,
+          gold 0),
+      conic-gradient(#DC8000 0,
+          #DC8000 38%,
+          #5f4c00 0,
+          #5f4c00 61%,
+          #B3A700 0,
+          #B3A700 77%,
+          #9C7A00 0,
+          #9C7A00 87%,
+          #00636C 0,
+          #00636C 93%,
+          #993D00 0,
+          #993D00 100%);
 
 }
 
@@ -504,8 +505,6 @@ button:hover {
 }
 
 .toggleButton {
-  position: absolute;
-  top: 75%;
   font-family: 'Bungee Inline', serif;
   margin-top: 0.5%;
   padding: 15px 25px;
@@ -537,16 +536,20 @@ button:hover {
 }
 
 .toggleButton:nth-of-type(1) {
-  left: 22%;
+  margin-left: 6%;
 }
 
 .toggleButton:nth-of-type(2) {
-  left: 68%;
+  margin-right: 6%;
+}
+
+.card .toggleButton {
+  display: none;
 }
 
 #plus {
-  position: absolute;
-  top: 40%;
+  margin-top: 120px;
+  font-size: 40px;
 }
 
 #bottom {
@@ -557,6 +560,7 @@ button:hover {
 }
 
 footer {
+  margin-top: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -580,7 +584,7 @@ footer {
   margin-bottom: 0;
   margin-left: 25%;
   margin-right: 25%;
-  margin-top: 1.6%;
+  margin-top: 25px;
   text-align: center;
   background: no-repeat url(pictures/black&red_background.jpg);
   background-size: cover;
@@ -596,6 +600,8 @@ footer {
   top: 63%;
   left: 5%;
 }
+
+
 
 .overlay {
   position: fixed;
@@ -627,11 +633,11 @@ footer {
   margin: 0px;
   font-family: 'Cormorant SC', serif;
   background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 20%,
-      transparent 20%, transparent 40%,
-      rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.7) 60%,
-      transparent 60%, transparent 80%,
-      rgba(255, 255, 255, 0.7) 80%, rgba(255, 255, 255, 0.7) 100%);
+          rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 20%,
+          transparent 20%, transparent 40%,
+          rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.7) 60%,
+          transparent 60%, transparent 80%,
+          rgba(255, 255, 255, 0.7) 80%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 #hamburger-menu #sidebar-menu {
@@ -652,7 +658,8 @@ footer {
   font-family: 'Bungee Shade', cursive;
   color: #ddfac6;
   font-size: 2.2rem;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+  margin-top: 20px;
 }
 
 #hamburger-menu ul {
@@ -685,258 +692,288 @@ footer {
   opacity: 0.4;
 }
 
+
 @media (max-width: 1250px) {
 
   #options {
-    margin-top: 20px;
-    height: 1200px;
+      margin-top: 20px;
+      height: 1250px;
+      margin-bottom: 5%;
+  }
+
+  .dropdown-content {
+      top: 82px;
+  }
+
+  .dropdown-content a {
+      font-size: 1.20vw;
   }
 
   #pie-charts {
-    flex-direction: column;
-    justify-content: space-between;
-    height: 520px;
-    margin-top: 2.5%;
-    margin-left: 10%;
-    margin-right: 10%;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 600px;
+      margin-top: 2.5%;
+      margin-left: 10%;
+      margin-right: 10%;
   }
 
   .card {
-    width: 100%;
+      width: 100%;
   }
 
   .pie-chart {
-    width: 100%;
+      width: 100%;
   }
 
   .flip-card-front,
   .flip-card-back {
-    width: 100%;
+      width: 100%;
   }
 
-  .toggleButton:nth-of-type(1) {
-    left: 43%;
-    top: 65%;
+  /* .toggleButton:nth-of-type(1) {
+      left: 43%;
+      top: 65%;
   }
 
   .toggleButton:nth-of-type(2) {
-    top: 136%;
-    left: 43%;
+      top: 136%;
+      left: 43%;
+  } */
+
+  .buttonContainer {
+      width: 100%;
+      position: relative;
+      top: 280%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .card .toggleButton {
+      display: inline;
   }
 
   #plus {
-    top: 68%;
-    left: 48%;
-    font-size: 50px;
+      margin-top: 320px;
+      margin-left: 5%;
+      margin-bottom: 0;
+      font-size: 50px;
   }
 
-  h5 {
-    top: 152%;
-    left: 31%;
-    font-size: 65px;
-    width: 390px;
+  /* h5 {
+      top: 152%;
+      left: 31%;
+      font-size: 65px;
+      width: 390px;
+  } */
+
+  footer {
+      margin-top: 400px;
+  }
+
+  footer .toggleButton {
+      display: none;
   }
 }
 
 @media screen and (max-width: 1000px) {
   #main-menu {
-    display: none;
+      display: none;
   }
 
   #hamburger-menu {
-    display: inline;
+      display: inline;
   }
 }
 
 @media(max-width: 1000px) {
   .split h1 {
-    margin-top: 2%;
-    margin-bottom: 0;
-    text-align: right;
-    font-family: 'Bungee Shade', cursive;
-    font-size: 15px;
-    color: black;
+      margin-top: 2%;
+      margin-bottom: 0;
+      text-align: right;
+      font-family: 'Bungee Shade', cursive;
+      font-size: 15px;
+      color: black;
   }
 
   .right h1 {
-    text-align: left;
-    color: rgb(136, 116, 0);
+      text-align: left;
+      color: rgb(136, 116, 0);
   }
 
   .navbar {
-    display: none;
+      display: none;
   }
 
   #options {
-    height: 1175px;
+      /* height: 1175px; */
+  }
+
+  .dropdown-content {
+      display: none;
   }
 
   #hamburger-menu {
-    top: 50px;
-    right: 65px;
+      top: 50px;
+      right: 65px;
   }
 
   #heading {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
   }
 
   #title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
   }
 
-  #plus {
-    left: 48.5%;
-  }
+  /* #plus {
+      left: 48.5%;
+  } */
 
-  h3 {
-    margin-bottom: 1.5%;
-  }
+  /* h3 {
+      margin-bottom: 1.5%;
+  } */
 
-  h5 {
-    top: 150%;
-    left: 25%;
-  }
+  /* h5 {
+      top: 150%;
+      left: 25%;
+  } */
 }
 
 @media(max-width: 750px) {
-  #messageForUser h1 {
-    font-size: 20px;
-  }
-
   #secondTitle {
-    margin-left: 32%;
+      margin-left: 32%;
   }
 
   .split h1 {
-    font-size: 11.5px;
+      font-size: 11.5px;
   }
 
   #hamburger-menu {
-    width: 40px;
-    height: 40px;
-    top: 117.5px;
-    right: 50.5px;
+      width: 40px;
+      height: 40px;
+      top: 117.5px;
+      right: 50.5px;
   }
 
   #heading h1 {
-    font-size: 3vw;
+      font-size: 3vw;
   }
 
-  .toggleButton:nth-of-type(1) {
-    left: 41%;
-    top: 68%;
+  /* .toggleButton:nth-of-type(1) {
+      left: 41%;
+      top: 68%;
   }
 
   .toggleButton:nth-of-type(2) {
-    left: 41%;
-    top: 135%;
-  }
+      left: 41%;
+      top: 135%;
+  } */
 
-  #pie-charts {
-    height: 500px;
-    margin-top: 5%;
-  }
+  /* #pie-charts {
+      height: 500px;
+      margin-top: 5%;
+  } */
 
-  #plus {
-    top: 70%;
-  }
+  /* #plus {
+      top: 70%;
+  } */
 
-  h5 {
-    top: 147%;
-    left: 21%;
-  }
+  /* h5 {
+      top: 147%;
+      left: 21%;
+  } */
 }
 
 @media(max-width: 690px) {
   #options {
-    height: 1140px;
+      height: 1270px;
   }
 
   .chartDescription {
-    font-size: 1.9vw;
+      font-size: 1.9vw;
   }
 
   .pie-chart h2 {
-    font-size: 2.8vw;
+      font-size: 2.8vw;
+      margin-right: 10%;
   }
 
   .fixed_header {
-    font-size: 2.7vw;
+      font-size: 2.7vw;
+      font-weight: 800;
   }
 
   .card li {
-    margin-top: 4%;
+      margin-top: 4%;
   }
 
-  svg {
-    width: 12px;
-    height: 12px;
-  }
-
-  .toggleButton:nth-of-type(1) {
-    left: 41%;
-    top: 66%;
-  }
-
-  .toggleButton:nth-of-type(2) {
-    left: 41%;
-    top: 134%;
-  }
-
-  #plus {
-    top: 69%;
-    font-size: 45px;
-  }
-
-  h5 {
-    font-size: 55px;
-    left: 18%;
-  }
-}
-
-@media(max-width: 570px) {
-  #messageForUser h1 {
-    font-size: 16px;
+  .fixed_header svg {
+      width: 12px;
+      height: 12px;
   }
 
   #pie-charts {
-    margin-top: 7.5%;
+      margin-top: 7.5%;
   }
 
-  .toggleButton:nth-of-type(1) {
-    left: 38%;
-    top: 66%;
+  /* .toggleButton:nth-of-type(1) {
+      left: 41%;
+      top: 66%;
   }
 
   .toggleButton:nth-of-type(2) {
-    left: 38%;
-    top: 134%;
-  }
+      left: 41%;
+      top: 134%;
+  } */
 
   #plus {
-    top: 69%;
+      top: 69%;
+      font-size: 45px;
   }
 
-  svg {
-    width: 8px;
-    height: 8px;
+  /* h5 {
+      font-size: 55px;
+      left: 18%;
+  } */
+}
+
+@media(max-width: 570px) {
+  /* .toggleButton:nth-of-type(1) {
+      left: 38%;
+      top: 66%;
   }
 
-  h5 {
-    top: 148%;
-    left: 12%;
-  }
+  .toggleButton:nth-of-type(2) {
+      left: 38%;
+      top: 134%;
+  } */
+  /* 
+  #plus {
+      top: 69%;
+  } */
+
+  /* .fixed_header svg {
+      width: 10px;
+      height: 10px;
+  } */
+
+  /* h5 {
+      top: 148%;
+      left: 12%;
+  } */
 
   .pie-chart h2 {
-    font-size: 3.5vw;
-    left: 17%;
+      font-size: 3.5vw;
+      left: 17%;
   }
 
   #rightChart h2 {
-    left: 21%;
+      left: 21%;
   }
 }

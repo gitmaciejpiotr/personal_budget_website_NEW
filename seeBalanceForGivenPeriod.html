@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Balance For The Given Period</title>
-  <link rel="stylesheet" href="seeBalanceFromGivenPeriod.css">
+  <link rel="stylesheet" href="seeBalanceForGivenPeriod.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Cormorant+SC:wght@300&display=swap"
     rel="stylesheet">
@@ -61,7 +61,7 @@
       <a href="seeMonthlyBalance.html">Bieżący miesiąc</a>
       <a href="seeLastMothBalance.html">Poprzedni miesiąc</a>
       <a href="seeYearlyBalance.html">Bieżący rok</a>
-      <a href="typeDateToSeeBalanceFromGivenPeriod.html">Niestandardowy</a>
+      <a href="typeDateToSeeBalanceForGivenPeriod.html">Niestandardowy</a>
     </div>
 
     <h3>Niestandardowy</h3>
@@ -481,10 +481,15 @@
             </table>
           </div>
         </div>
+
+        <div class="buttonContainer">
+          <label for="menuToggle" class="toggleButton">Odwróć</label>
+        </div>
       </div>
 
 
       <h4 id="plus">+</h4>
+
 
       <div class="card">
         <input id="menuToggle2" type="checkbox">
@@ -900,13 +905,16 @@
             </table>
           </div>
         </div>
+
+        <div class="buttonContainer">
+          <label for="menuToggle2" class="toggleButton">Odwróć</label>
+        </div>
       </div>
     </section>
 
     <footer>
 
       <label for="menuToggle" class="toggleButton">Odwróć</label>
-      <label for="menuToggle2" class="toggleButton">Odwróć</label>
 
       <h5>= -112 zł</h5>
       <div id="messageForUser">
@@ -915,13 +923,19 @@
 
         <img src="pictures/falling_down.png" id="fallingMan" alt="">
       </div>
+
+      <label for="menuToggle2" class="toggleButton">Odwróć</label>
       
     </footer>
 
     <input type="checkbox" id="hamburger-input" class="burger-shower">
     <label id="hamburger-menu" for="hamburger-input">
       <div id="sidebar-menu">
-        <h3>Menu</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+          fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+        </svg></h3>
         <ul>
           <li><a href="#">&nbsp;+ &nbsp;&nbsp;Przychód</a></li>
           <li><a href="addExpense.html">&nbsp;+ &nbsp;&nbsp;Wydatek</a></li>
@@ -951,7 +965,7 @@
     <div class="overlay"></div>
   </section>
   <script>
-    
+
     /* When the user clicks on the button, 
     toggle between hiding and showing the dropdown content */
     function myFunction() {
