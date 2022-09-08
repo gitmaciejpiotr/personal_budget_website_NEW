@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Previous Monthly Balance</title>
+  <title>Last Month Balance</title>
   <link rel="stylesheet" href="seeLastMothBalance.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Cormorant+SC:wght@300&display=swap"
@@ -61,10 +61,10 @@
       <a href="seeMonthlyBalance.html">Bieżący miesiąc</a>
       <a href="seeLastMothBalance.html">Poprzedni miesiąc</a>
       <a href="seeYearlyBalance.html">Bieżący rok</a>
-      <a href="typeDateToSeeBalanceFromGivenPeriod.html">Niestandardowy</a>
+      <a href="typeDateToSeeBalanceForGivenPeriod.html">Niestandardowy</a>
     </div>
 
-    <h3>Poprzedni miesiąc</h3>
+    <h3>Bieżący miesiąc</h3>
 
     <section id="pie-charts">
       <div id="leftCard" class="card">
@@ -481,10 +481,15 @@
             </table>
           </div>
         </div>
+
+        <div class="buttonContainer">
+          <label for="menuToggle" class="toggleButton">Odwróć</label>
+        </div>
       </div>
 
 
       <h4 id="plus">+</h4>
+
 
       <div class="card">
         <input id="menuToggle2" type="checkbox">
@@ -900,13 +905,16 @@
             </table>
           </div>
         </div>
+
+        <div class="buttonContainer">
+          <label for="menuToggle2" class="toggleButton">Odwróć</label>
+        </div>
       </div>
     </section>
 
     <footer>
 
       <label for="menuToggle" class="toggleButton">Odwróć</label>
-      <label for="menuToggle2" class="toggleButton">Odwróć</label>
 
       <h5>= -112 zł</h5>
       <div id="messageForUser">
@@ -915,6 +923,8 @@
 
         <img src="pictures/falling_down.png" id="fallingMan" alt="">
       </div>
+
+      <label for="menuToggle2" class="toggleButton">Odwróć</label>
       
     </footer>
 
@@ -951,7 +961,7 @@
     <div class="overlay"></div>
   </section>
   <script>
-    
+
     /* When the user clicks on the button, 
     toggle between hiding and showing the dropdown content */
     function myFunction() {
