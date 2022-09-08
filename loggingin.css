@@ -51,7 +51,6 @@ form {
 section {
     display: flex;
     flex-direction: column;
-    /* background-color: black; */
 }
 
 #inputs {
@@ -71,10 +70,6 @@ input {
     border: none;
     box-shadow: 0 0.2em 0.2em -0.1em rgb(0, 0, 0, 0.1);
 }
-
-/* input:nth-of-type(1) {
-    margin-top: 4%;
-} */
 
 #rememberme {
     margin: 0;
@@ -120,11 +115,9 @@ button {
     padding: 0.5em 1em;
     font-size: 1.05em;
     text-align: left;
-    /* height: 70px; */
     width: 195px;
     font-family: 'Bungee Inline', serif;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s,
-        /*box-shadow 0.2s,*/
         transform 0.2s;
 }
 
@@ -138,7 +131,6 @@ button:hover {
     border-color: gold;
     background-color: black;
     color: gold;
-    /* box-shadow: 0 0.5em 0.5em -0.4em white; */
     transform: translateX(0.25em);
     cursor: pointer;
 }

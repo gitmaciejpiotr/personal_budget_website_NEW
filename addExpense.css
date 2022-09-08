@@ -29,10 +29,6 @@ body {
     color: rgb(136, 116, 0);
 }
 
-.split hr {
-    size: 3px;
-}
-
 h2 {
     margin-top: 0;
     margin-bottom: 0;
@@ -50,13 +46,13 @@ h3 {
 }
 
 #options {
-    margin-top: 3%;
+    margin-top: 97px;
     width: 90%;
-    height: 70%;
+    height: 545px;
     background-color: rgb(255, 215, 0, 0.7);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     border: 6px solid black;
     border-radius: 2vw;
 }
@@ -90,7 +86,6 @@ h3 {
     cursor: pointer;
 }
 
-
 .navbar {
     overflow: hidden;
     font-family: 'Bungee Inline', serif;
@@ -102,14 +97,14 @@ h3 {
 
 .navbar a {
     float: left;
-    font-size: 0.9em;
+    font-size: 15px;
     color: black;
     text-align: center;
     border: 2px solid gold;
     border-bottom-color: black;
-    padding: 0.5em 1em;
+    padding: 5px 3px;
     width: 20%;
-    height: 8%;
+    height: 35px;
     text-decoration: none;
     transition: background-color 0.2s;
 }
@@ -133,21 +128,20 @@ h3 {
 .dropdown {
     float: left;
     overflow: hidden;
-    width: 23%;
-    height: 8%;
+    width: 20%;
 }
 
 .dropdown .dropbtn {
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 15px;
     width: 100%;
+    height: 93%;
     border: 2px solid gold;
     border-bottom-color: black;
     outline: none;
     color: black;
-    padding: 0.5em 1em;
+    padding: 5px 3px;
 
-    /* background-color: rgb(255, 215, 0, 0.7); */
     background-color: transparent;
     font-family: inherit;
     margin: 0;
@@ -163,19 +157,26 @@ h3 {
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 159px;
+    left: 41.35%;
     background-color: black;
-    min-width: 160px;
-    width: 18vw;
+    width: 17.3%;
+    height: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 0 0 5px 5px;
 }
 
 .dropdown-content a {
+    font-family: 'Bungee Inline', serif;
+    font-size: 15px;
+    padding: 5px 3px;
+    height: 35px;
+    transition: background-color 0.2s;
     float: none;
     color: white;
     border: none;
-    width: 89%;
+    width: 85%;
     padding: 0.5em 1em;
     text-decoration: none;
     display: block;
@@ -186,7 +187,6 @@ h3 {
 .dropdown-content a:hover {
     color: gold;
     background-color: black;
-    /* border: 2px solid white; */
     border-radius: 0 0 5px 5px;
 }
 
@@ -200,7 +200,6 @@ h3 {
 
 .option:nth-of-type(3) {
     border: black;
-    background-color: black;
     color: gold;
 }
 
@@ -212,15 +211,15 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-bottom: 2%;
+    /* margin-bottom: 20px; */
 }
 
 section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 1.5%;
-    margin-bottom: 3%;
+    margin-top: 15px;
+    margin-bottom: 30px;
 }
 
 .inputs {
@@ -276,10 +275,17 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+#buttonContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 #onlyButton {
     width: 10em;
-    margin-left: 41%;
-    margin-top: 2%;
+    /* margin-left: 41%; */
+    margin-top: 20px;
     background: none;
     font-family: 'Bungee Inline', cursive;
     text-align: left;
@@ -290,7 +296,6 @@ input::-webkit-inner-spin-button {
     padding: 0.2em 0.5em;
     font-size: 1.5em;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s,
-        /*box-shadow 0.2s,*/
         transform 0.2s;
 }
 
@@ -298,7 +303,6 @@ input::-webkit-inner-spin-button {
     border-color: gold;
     background-color: black;
     color: gold;
-    /* box-shadow: 0 0.5em 0.5em -0.4em white; */
     transform: translateY(-0.25em);
     cursor: pointer;
 }
@@ -324,18 +328,6 @@ input::-webkit-inner-spin-button {
     border-radius: 10px;
 }
 
-
-
-/* @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap'); */
-
-/* body {
-  padding: 0px;
-  margin: 0px;
-  font-size: 20px;
-  min-height: 200vh;
-  font-family: 'Cabin', Sans-serif;
-} */
-
 .overlay {
     position: fixed;
     top: 0;
@@ -354,7 +346,6 @@ input::-webkit-inner-spin-button {
     display: block;
     height: 100px;
     width: 100%;
-    /* background: rgba(0, 0, 0, 0.3); */
     margin: 0px;
     z-index: 9;
 }
@@ -393,7 +384,7 @@ input::-webkit-inner-spin-button {
 #hamburger-menu {
     position: absolute;
     top: 55px;
-    left: 60px;
+    right: 60px;
     width: 50px;
     height: 50px;
     display: none;
@@ -402,15 +393,15 @@ input::-webkit-inner-spin-button {
     margin: 0px;
     font-family: 'Cormorant SC', serif;
     background: linear-gradient(to bottom,
-            white, white 20%,
+            rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 20%,
             transparent 20%, transparent 40%,
-            white 40%, white 60%,
+            rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.7) 60%,
             transparent 60%, transparent 80%,
-            white 80%, white 100%);
+            rgba(255, 255, 255, 0.7) 80%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 #hamburger-menu #sidebar-menu {
-    visibilty: hidden;
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: -250px;
@@ -423,8 +414,12 @@ input::-webkit-inner-spin-button {
 }
 
 #hamburger-menu h3 {
-    color: #B9FAF8;
+    text-align: center;
+    font-family: 'Bungee Shade', cursive;
+    color: #ddfac6;
     font-size: 2.2rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 #hamburger-menu ul {
@@ -437,10 +432,9 @@ input::-webkit-inner-spin-button {
 }
 
 #hamburger-menu a {
-    color: #B9FAF8;
+    color: #ddfac6;
     font-size: 1.3rem;
     text-decoration: none;
-    transform: color 0.1s;
 }
 
 #hamburger-menu a:hover {
@@ -481,6 +475,12 @@ input::-webkit-inner-spin-button {
 }
 
 @media(max-width: 1000px) {
+    #options {
+        margin-top: 50px;
+        height: 600px;
+        margin-bottom: 20px;
+    }
+
     #onlyButton {
         width: 9.15em;
         font-size: 1em;
@@ -496,8 +496,8 @@ input::-webkit-inner-spin-button {
     }
 
     #hamburger-menu {
-        top: 60px;
-        left: 65px;
+        top: 90px;
+        right: 75px;
     }
 
     #heading {
@@ -514,27 +514,21 @@ input::-webkit-inner-spin-button {
 
     input,
     select {
-        margin-bottom: 20%;
+        margin-bottom: 50px;
     }
 
     #richMan {
-        margin-top: 3%;
-        width: 170px;
-        height: 190px;
+        margin-top: 30px;
+        width: 20vw;
+        height: 20vw;
+    }
+
+    textarea {
+        width: 30vw;
     }
 }
 
 @media(max-width: 850px) {
-    #hamburger-menu {
-        top: 50px;
-        left: 55px;
-    }
-
-    input,
-    select {
-        margin-bottom: 25%;
-    }
-
     label {
         font-size: 1.75vw;
     }
@@ -543,49 +537,11 @@ input::-webkit-inner-spin-button {
     select {
         font-size: 1.75vw;
     }
-
-    #richMan {
-        width: 140px;
-        height: 160px;
-    }
-
-    #commentLabel {
-        margin-top: 4%;
-    }
-
-    textarea {
-        margin-left: 35%;
-        width: 35%;
-    }
 }
 
 @media(max-width: 750px) {
     #secondTitle {
         margin-left: 37%;
-    }
-
-    input,
-    select {
-        margin-bottom: 40%;
-    }
-
-    #richMan {
-        margin-top: 6%;
-        width: 125px;
-        height: 145px;
-    }
-
-    #commentLabel {
-        margin-top: 6%;
-    }
-
-    form {
-        margin-top: 2%;
-    }
-
-    textarea {
-        margin-left: 30%;
-        width: 47.5%;
     }
 }
 
@@ -601,14 +557,12 @@ input::-webkit-inner-spin-button {
     #hamburger-menu {
         width: 40px;
         height: 40px;
-        top: 42.5px;
-        left: 47.5px;
+        top: 110px;
+        right: 47.5px;
     }
 
     #richMan {
-        margin-top: 10%;
-        width: 100px;
-        height: 120px;
+        margin-top: 50px;
     }
 
     label {
@@ -619,29 +573,14 @@ input::-webkit-inner-spin-button {
         margin-top: 6%;
     }
 
-    input,
-    select {
-        font-size: 2.5vw;
-        margin-bottom: 60%;
-    }
-
-    #commentLabel {
-        margin-top: 12%;
-    }
-
     #onlyButton {
         width: 9.15em;
         font-size: 0.9em;
-        margin-left: 35%;
+        /* margin-left: 35%; */
     }
 
     #okGesture {
         width: 34px;
         height: 30px;
-    }
-
-    textarea {
-        margin-left: 28%;
-        width: 45%;
     }
 }
