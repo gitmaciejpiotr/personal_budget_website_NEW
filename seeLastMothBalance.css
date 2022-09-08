@@ -658,7 +658,8 @@ footer {
   font-family: 'Bungee Shade', cursive;
   color: #ddfac6;
   font-size: 2.2rem;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+  margin-top: 20px;
 }
 
 #hamburger-menu ul {

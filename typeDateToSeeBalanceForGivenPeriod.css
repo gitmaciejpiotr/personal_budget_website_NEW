@@ -186,12 +186,16 @@ h4:hover {
 }
 
 
-form {
+#formForBigScreen {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 350px;
     margin-bottom: 5%;
+}
+
+#formForSmallScreen {
+    display: none;
 }
 
 #dateInputs {
@@ -281,9 +285,10 @@ input {
 }
 
 #finger {
-    position: fixed;
+    position: relative;
+    top: 20%;
+    right: 0;
 }
-
 
 .overlay {
     position: fixed;
@@ -340,7 +345,8 @@ input {
     font-family: 'Bungee Shade', cursive;
     color: #ddfac6;
     font-size: 2.2rem;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    margin-top: 20px;
 }
 
 #hamburger-menu ul {
@@ -391,6 +397,15 @@ input {
 }
 
 @media(max-width: 1000px) {
+    #formForSmallScreen {
+        display: block;
+    }
+
+    #formForBigScreen {
+        display: none;
+    }
+
+
     #dateInputsOnSmallScreen {
         display: flex;
         flex-direction: column;
@@ -406,7 +421,7 @@ input {
     }
 
     #centering {
-        margin-top: 200px;
+        margin-top: 40px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -414,15 +429,12 @@ input {
 
     #options {
         margin-top: 20px;
-        height: 650px;
+        height: 660px;
     }
 
     #rocket {
         margin-left: 50px;
     }
-
-
-
 
     .split h1 {
         margin-top: 2%;
